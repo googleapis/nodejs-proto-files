@@ -5,8 +5,10 @@
   "scripts": {
     "prepublish": "node ./prepublish.js"
   },
+  "main": "index.js",
   "files": [
-    "google/"
+    "google/",
+    "index.js"
   ],
   "repository": "stephenplusplus/google-proto-files",
   "keywords": [
