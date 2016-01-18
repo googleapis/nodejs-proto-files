@@ -1,0 +1,26 @@
+{
+  "name": "google-proto-files",
+  "version": "0.0.0",
+  "description": "All of the Google API's protocol buffer files",
+  "scripts": {
+    "prepublish": "node ./prepublish.js"
+  },
+  "files": [
+    "google/"
+  ],
+  "repository": "stephenplusplus/google-proto-files",
+  "keywords": [
+    "google",
+    "proto",
+    "protobuf",
+    "protocol buffer",
+    "grpc"
+  ],
+  "author": "Stephen Sawchuk <sawchuk@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "decompress-zip": "^0.2.0",
+    "standard": "^5.4.1",
+    "got": "^5.4.0"
+  }
+}
