@@ -1,5 +1,5 @@
 # google-proto-files
-> Get a copy of the [googleapis](https://github.com/google/google-api-nodejs-client) proto files into your project
+> Get a copy of the [googleapis](https://github.com/google/googleapis) proto files into your project
 
 ```sh
 $ npm install --save google-proto-files
