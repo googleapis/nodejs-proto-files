@@ -7,8 +7,17 @@ var googleProtoFiles = module.exports = function () {
   return path.join.apply(null, [__dirname, 'google'].concat(args))
 }
 
+module.exports.bigtable = {
+  admin: googleProtoFiles('bigtable/admin/table/v1/bigtable_table_service.proto'),
+  v1: googleProtoFiles('bigtable/v1/bigtable_service.proto')
+}
+
 module.exports.cloudtrace = {
   v1: googleProtoFiles('devtools/cloudtrace/v1/trace.proto')
+}
+
+module.exports.container = {
+  v1: googleProtoFiles('container/v1/cluster_service.proto')
 }
 
 module.exports.datastore = {
