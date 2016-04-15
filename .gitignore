@@ -1,3 +1,2 @@
 *.zip
-google/*
-!google/protobuf
+google
