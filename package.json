@@ -1,6 +1,6 @@
 {
   "name": "google-proto-files",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "All of the Google API's protocol buffer files",
   "scripts": {
     "prepublish": "node ./prepublish.js"
