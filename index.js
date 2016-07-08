@@ -36,3 +36,8 @@ module.exports.pubsub = {
   v1: googleProtoFiles('pubsub/v1/pubsub.proto'),
   v1beta2: googleProtoFiles('pubsub/v1beta2/pubsub.proto')
 }
+
+module.exports.speech = {
+  v1: googleProtoFiles('cloud/speech/v1/cloud_speech.proto'),
+  v1beta1: googleProtoFiles('cloud/speech/v1beta1/cloud_speech.proto')
+}
