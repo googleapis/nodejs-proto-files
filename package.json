@@ -18,7 +18,7 @@
     "protocol buffer",
     "grpc"
   ],
-  "author": "Stephen Sawchuk <sawchuk@gmail.com>",
+  "author": "google-proto-files project authors",
   "license": "MIT",
   "devDependencies": {
     "decompress-zip": "^0.2.0",
