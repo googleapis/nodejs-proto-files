@@ -28,6 +28,10 @@ module.exports.iam = {
   v1: googleProtoFiles('iam/v1/iam_policy.proto')
 }
 
+module.exports.language = {
+  v1beta1: googleProtoFiles('cloud/language/v1beta1/language_service.proto')
+}
+
 module.exports.logging = {
   v2: googleProtoFiles('logging/v2/logging.proto')
 }
