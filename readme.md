@@ -1,4 +1,5 @@
-# google-proto-files
+# google-proto-files [![Build Status][build_img]][build_link]
+
 > Get a copy of the [googleapis](https://github.com/google/googleapis) proto files into your project
 
 ```sh
@@ -19,3 +20,6 @@ protoFiles('logging', 'v2')
 protoFiles.pubsub.v1
 // node_modules/google-proto-files/google/pubsub/v1/pubsub.proto
 ```
+
+[build_img]: https://travis-ci.org/stephenplusplus/google-proto-files.svg?branch=master
+[build_link]: https://travis-ci.org/stephenplusplus/google-proto-files
