@@ -5,7 +5,8 @@
   "scripts": {
     "prepublish": "node ./prepublish.js",
     "lint": "standard \"**/*.js\"",
-    "test": "npm run lint"
+    "mocha": "mocha -R spec test/*.test.js",
+    "test": "npm run lint && npm run mocha"
   },
   "main": "index.js",
   "files": [
@@ -20,11 +21,21 @@
     "protocol buffer",
     "grpc"
   ],
+  "standard": {
+    "global": [
+      "before",
+      "describe",
+      "it"
+    ]
+  },
   "author": "google-proto-files project authors",
   "license": "MIT",
   "devDependencies": {
     "decompress-zip": "^0.2.0",
-    "standard": "^7.1.2",
-    "got": "^5.4.0"
+    "got": "^5.4.0",
+    "mocha": "^3.0.2",
+    "proxyquire": "^1.7.10",
+    "sinon": "^1.17.5",
+    "standard": "^7.1.2"
   }
 }
