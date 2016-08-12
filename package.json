@@ -3,7 +3,9 @@
   "version": "0.4.0",
   "description": "All of the Google API's protocol buffer files",
   "scripts": {
-    "prepublish": "node ./prepublish.js"
+    "prepublish": "node ./prepublish.js",
+    "lint": "standard \"**/*.js\"",
+    "test": "npm run lint"
   },
   "main": "index.js",
   "files": [
@@ -22,7 +24,7 @@
   "license": "MIT",
   "devDependencies": {
     "decompress-zip": "^0.2.0",
-    "standard": "^5.4.1",
+    "standard": "^7.1.2",
     "got": "^5.4.0"
   }
 }
