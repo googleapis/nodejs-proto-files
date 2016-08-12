@@ -58,7 +58,6 @@ module.exports.speech = {
   v1beta1: googleProtoFiles('cloud/speech/v1beta1/cloud_speech.proto')
 }
 
-
 module.exports.storagetransfer = {
   v1: googleProtoFiles('storagetransfer/v1/transfer.proto')
 }
