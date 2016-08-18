@@ -28,6 +28,7 @@ describe('google-proto-files', function () {
   })
   it('should export datastore', function () {
     assert(googleProtoFiles.datastore)
+    assert.equal(googleProtoFiles.datastore.v1, resolve('datastore/v1/datastore.proto'))
     assert.equal(googleProtoFiles.datastore.v1beta3, resolve('datastore/v1beta3/datastore.proto'))
   })
   it('should export iam', function () {
