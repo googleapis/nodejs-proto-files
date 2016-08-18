@@ -25,6 +25,7 @@ module.exports.container = {
 }
 
 module.exports.datastore = {
+  v1: googleProtoFiles('datastore/v1/datastore.proto'),
   v1beta3: googleProtoFiles('datastore/v1beta3/datastore.proto')
 }
 
