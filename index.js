@@ -12,8 +12,16 @@ module.exports.appengine = {
 }
 
 module.exports.bigtable = {
-  admin: googleProtoFiles('bigtable/admin/table/v1/bigtable_table_service.proto'),
-  v1: googleProtoFiles('bigtable/v1/bigtable_service.proto')
+  v1: googleProtoFiles('bigtable/v1/bigtable_service.proto'),
+  v2: googleProtoFiles('bigtable/v2/bigtable.proto')
+}
+
+module.exports.bigtable.admin = {
+  v1: googleProtoFiles('bigtable/admin/table/v1/bigtable_table_service.proto'),
+  v2: {
+    instance: googleProtoFiles('bigtable/admin/v2/bigtable_instance_admin.proto'),
+    table: googleProtoFiles('bigtable/admin/v2/bigtable_table_admin.proto')
+  }
 }
 
 module.exports.cloudtrace = {

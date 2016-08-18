@@ -15,8 +15,14 @@ describe('google-proto-files', function () {
   })
   it('should export bigtable', function () {
     assert(googleProtoFiles.bigtable)
-    assert.equal(googleProtoFiles.bigtable.admin, resolve('bigtable/admin/table/v1/bigtable_table_service.proto'))
     assert.equal(googleProtoFiles.bigtable.v1, resolve('bigtable/v1/bigtable_service.proto'))
+    assert.equal(googleProtoFiles.bigtable.v2, resolve('bigtable/v2/bigtable.proto'))
+  })
+  it('should export bigtable admin', function () {
+    assert(googleProtoFiles.bigtable.admin)
+    assert.equal(googleProtoFiles.bigtable.admin.v1, resolve('bigtable/admin/table/v1/bigtable_table_service.proto'))
+    assert.equal(googleProtoFiles.bigtable.admin.v2.instance, resolve('bigtable/admin/v2/bigtable_instance_admin.proto'))
+    assert.equal(googleProtoFiles.bigtable.admin.v2.table, resolve('bigtable/admin/v2/bigtable_table_admin.proto'))
   })
   it('should export cloudtrace', function () {
     assert(googleProtoFiles.cloudtrace)
