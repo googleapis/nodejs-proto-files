@@ -41,6 +41,10 @@ describe('google-proto-files', function () {
     assert(googleProtoFiles.iam)
     assert.equal(googleProtoFiles.iam.v1, resolve('iam/v1/iam_policy.proto'))
   })
+  it('should export iam admin', function () {
+    assert(googleProtoFiles.iam.admin)
+    assert.strictEqual(googleProtoFiles.iam.admin.v1, resolve('iam/admin/v1/iam.proto'))
+  })
   it('should export language', function () {
     assert(googleProtoFiles.language)
     assert.equal(googleProtoFiles.language.v1beta1, resolve('cloud/language/v1beta1/language_service.proto'))
