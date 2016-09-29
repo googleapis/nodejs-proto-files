@@ -32,15 +32,21 @@ var extract = function (input, opts) {
     })
 }
 
-extract('https://github.com/google/googleapis/archive/master.zip', { strip: 1 })
-extract('https://github.com/google/protobuf/archive/master.zip', {
-  strip: 2,
-  filter: function (file) {
-    return file.parent.indexOf('protobuf-master') === 0 &&
-           file.parent.indexOf('protobuf-master/src/') === 0 &&
-           file.parent.indexOf('/compiler') === -1 &&
-           file.parent.indexOf('/internal') === -1 &&
-           file.filename.indexOf('unittest') === -1 &&
-           file.filename.indexOf('test') === -1
-  }
+require('child_process').exec('rm -r google', function (err) {
+  if (err) throw err
+
+  extract('https://github.com/google/googleapis/archive/master.zip', {
+    strip: 1
+  })
+  extract('https://github.com/google/protobuf/archive/master.zip', {
+    strip: 2,
+    filter: function (file) {
+      return file.parent.indexOf('protobuf-master') === 0 &&
+             file.parent.indexOf('protobuf-master/src/') === 0 &&
+             file.parent.indexOf('/compiler') === -1 &&
+             file.parent.indexOf('/internal') === -1 &&
+             file.filename.indexOf('unittest') === -1 &&
+             file.filename.indexOf('test') === -1
+    }
+  })
 })
