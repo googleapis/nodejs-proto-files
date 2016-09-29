@@ -56,7 +56,6 @@ describe('google-proto-files', function () {
   it('should export monitoring', function () {
     assert(googleProtoFiles.monitoring)
     assert(googleProtoFiles.monitoring.v3)
-    assert.equal(googleProtoFiles.monitoring.v3.agent, resolve('monitoring/v3/agent_service.proto'))
     assert.equal(googleProtoFiles.monitoring.v3.group, resolve('monitoring/v3/group_service.proto'))
     assert.equal(googleProtoFiles.monitoring.v3.metric, resolve('monitoring/v3/metric_service.proto'))
   })
