@@ -55,7 +55,6 @@ module.exports.logging = {
 
 module.exports.monitoring = {
   v3: {
-    agent: googleProtoFiles('monitoring/v3/agent_service.proto'),
     group: googleProtoFiles('monitoring/v3/group_service.proto'),
     metric: googleProtoFiles('monitoring/v3/metric_service.proto')
   }
