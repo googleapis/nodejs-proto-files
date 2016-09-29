@@ -32,9 +32,7 @@ var extract = function (input, opts) {
     })
 }
 
-require('child_process').exec('rm -r google', function (err) {
-  if (err) throw err
-
+require('child_process').exec('rm -r google', function () {
   extract('https://github.com/google/googleapis/archive/master.zip', {
     strip: 1
   })
