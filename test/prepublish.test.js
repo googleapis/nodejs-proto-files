@@ -11,6 +11,10 @@ function makeMockStream () {
   }
 }
 
+var childProcessMock = {
+  exec: sinon.stub()
+}
+
 var gotMock = {
   stream: sinon.stub().returns(makeMockStream())
 }
@@ -20,15 +24,21 @@ var decompressZipMock = sinon.stub()
 describe('prepublish', function () {
   before(function () {
     proxyquire('../prepublish', {
-      got: gotMock,
+      child_process: childProcessMock,
       'decompress-zip': decompressZipMock,
       fs: {
         createWriteStream: sinon.stub()
-      }
+      },
+      got: gotMock
     })
   })
 
+  it('should delete existing proto files', function () {
+    assert(childProcessMock.exec.calledWith('rm -r google'))
+  })
+
   it('should download two blobs', function () {
+    childProcessMock.exec.callArg(1) // callback()
     assert(gotMock.stream.calledTwice)
   })
 })
