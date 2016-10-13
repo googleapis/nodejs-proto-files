@@ -37,6 +37,10 @@ module.exports.datastore = {
   v1beta3: googleProtoFiles('datastore/v1beta3/datastore.proto')
 }
 
+module.exports.functions = {
+  v1beta2: googleProtoFiles('cloud/functions/v1beta2/functions.proto')
+}
+
 module.exports.iam = {
   v1: googleProtoFiles('iam/v1/iam_policy.proto')
 }
