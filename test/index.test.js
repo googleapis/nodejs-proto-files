@@ -52,6 +52,7 @@ describe('google-proto-files', function () {
   it('should export language', function () {
     assert(googleProtoFiles.language)
     assert.equal(googleProtoFiles.language.v1beta1, resolve('cloud/language/v1beta1/language_service.proto'))
+    assert.equal(googleProtoFiles.language.v1, resolve('cloud/language/v1/language_service.proto'))
   })
   it('should export logging', function () {
     assert(googleProtoFiles.logging)

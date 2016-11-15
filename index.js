@@ -50,7 +50,8 @@ module.exports.iam.admin = {
 }
 
 module.exports.language = {
-  v1beta1: googleProtoFiles('cloud/language/v1beta1/language_service.proto')
+  v1beta1: googleProtoFiles('cloud/language/v1beta1/language_service.proto'),
+  v1: googleProtoFiles('cloud/language/v1/language_service.proto')
 }
 
 module.exports.logging = {
