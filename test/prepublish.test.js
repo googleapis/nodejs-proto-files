@@ -41,4 +41,8 @@ describe('prepublish', function () {
     childProcessMock.exec.callArg(1) // callback()
     assert(gotMock.stream.calledTwice)
   })
+
+  it('should copy overrides to google directory', function () {
+    assert(childProcessMock.exec.calledWith('cp -R overrides google'))
+  })
 })

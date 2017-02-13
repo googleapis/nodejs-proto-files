@@ -69,6 +69,12 @@ describe('google-proto-files', function () {
     assert.equal(googleProtoFiles.pubsub.v1, resolve('pubsub/v1/pubsub.proto'))
     assert.equal(googleProtoFiles.pubsub.v1beta2, resolve('pubsub/v1beta2/pubsub.proto'))
   })
+  it('should export spanner', function () {
+    assert(googleProtoFiles.spanner)
+    assert.equal(googleProtoFiles.spanner.v1, resolve('spanner/v1/spanner.proto'))
+    assert.equal(googleProtoFiles.spanner.admin.v1.database, resolve('spanner/admin/database/v1/spanner_database_admin.proto'))
+    assert.equal(googleProtoFiles.spanner.admin.v1.instance, resolve('spanner/admin/instance/v1/spanner_instance_admin.proto'))
+  })
   it('should export speech', function () {
     assert(googleProtoFiles.speech)
     assert.equal(googleProtoFiles.speech.v1, resolve('cloud/speech/v1/cloud_speech.proto'))

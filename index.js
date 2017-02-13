@@ -70,6 +70,17 @@ module.exports.pubsub = {
   v1beta2: googleProtoFiles('pubsub/v1beta2/pubsub.proto')
 }
 
+module.exports.spanner = {
+  v1: googleProtoFiles('spanner/v1/spanner.proto')
+}
+
+module.exports.spanner.admin = {
+  v1: {
+    database: googleProtoFiles('spanner/admin/database/v1/spanner_database_admin.proto'),
+    instance: googleProtoFiles('spanner/admin/instance/v1/spanner_instance_admin.proto')
+  }
+}
+
 module.exports.speech = {
   v1: googleProtoFiles('cloud/speech/v1/cloud_speech.proto'),
   v1beta1: googleProtoFiles('cloud/speech/v1beta1/cloud_speech.proto')

@@ -47,4 +47,5 @@ require('child_process').exec('rm -r google', function () {
              file.filename.indexOf('test') === -1
     }
   })
+  require('child_process').exec('cp -R overrides google')
 })
