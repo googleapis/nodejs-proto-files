@@ -31,6 +31,7 @@
   "author": "google-proto-files project authors",
   "license": "MIT",
   "devDependencies": {
+    "async": "^2.1.5",
     "decompress-zip": "^0.2.0",
     "got": "^5.4.0",
     "mocha": "^3.0.2",

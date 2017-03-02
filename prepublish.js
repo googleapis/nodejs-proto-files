@@ -1,24 +1,23 @@
 'use strict'
 
+var async = require('async')
 var DecompressZip = require('decompress-zip')
 var fs = require('fs')
 var got = require('got')
 var path = require('path')
 
-var throwErr = function (err) { if (err) throw err }
-
-var extract = function (input, opts) {
+var extract = function (input, opts, callback) {
   var output = Math.random() + '.zip'
 
   got.stream(input)
-    .on('error', throwErr)
+    .on('error', callback)
     .pipe(fs.createWriteStream(output))
-    .on('error', throwErr)
+    .on('error', callback)
     .on('finish', function () {
       var unzipper = new DecompressZip(output)
 
       unzipper
-        .on('error', throwErr)
+        .on('error', callback)
         .extract({
           strip: opts.strip,
           filter: function (file) {
@@ -27,25 +26,39 @@ var extract = function (input, opts) {
           }
         })
         .on('extract', function () {
-          fs.unlink(output, throwErr)
+          fs.unlink(output, callback)
         })
     })
 }
 
-require('child_process').exec('rm -r google', function () {
-  extract('https://github.com/google/googleapis/archive/master.zip', {
-    strip: 1
-  })
-  extract('https://github.com/google/protobuf/archive/master.zip', {
-    strip: 2,
-    filter: function (file) {
-      return file.parent.indexOf('protobuf-master') === 0 &&
-             file.parent.indexOf('protobuf-master/src/') === 0 &&
-             file.parent.indexOf('/compiler') === -1 &&
-             file.parent.indexOf('/internal') === -1 &&
-             file.filename.indexOf('unittest') === -1 &&
-             file.filename.indexOf('test') === -1
-    }
-  })
-  require('child_process').exec('cp -R overrides google')
+async.series([
+  function (next) {
+    require('child_process').exec('rm -r google', next)
+  },
+
+  function (next) {
+    extract('https://github.com/google/googleapis/archive/master.zip', {
+      strip: 1
+    }, next)
+  },
+
+  function (next) {
+    extract('https://github.com/google/protobuf/archive/master.zip', {
+      strip: 2,
+      filter: function (file) {
+        return file.parent.indexOf('protobuf-master') === 0 &&
+               file.parent.indexOf('protobuf-master/src/') === 0 &&
+               file.parent.indexOf('/compiler') === -1 &&
+               file.parent.indexOf('/internal') === -1 &&
+               file.filename.indexOf('unittest') === -1 &&
+               file.filename.indexOf('test') === -1
+      }
+    }, next)
+  },
+
+  function (next) {
+    require('child_process').exec('cp -R overrides/* google', next)
+  }
+], function (err) {
+  if (err) throw err
 })
