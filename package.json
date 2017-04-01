@@ -26,6 +26,10 @@
       "before",
       "describe",
       "it"
+    ],
+    "ignore": [
+      "google/",
+      "overrides/"
     ]
   },
   "author": "google-proto-files project authors",

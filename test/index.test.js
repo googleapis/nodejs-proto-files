@@ -77,8 +77,9 @@ describe('google-proto-files', function () {
   })
   it('should export speech', function () {
     assert(googleProtoFiles.speech)
-    assert.equal(googleProtoFiles.speech.v1, resolve('cloud/speech/v1/cloud_speech.proto'))
     assert.equal(googleProtoFiles.speech.v1beta1, resolve('cloud/speech/v1beta1/cloud_speech.proto'))
+    assert.equal(googleProtoFiles.speech.v1, resolve('cloud/speech/v1/cloud_speech.proto'))
+    assert.equal(googleProtoFiles.speech.v2, resolve('cloud/speech/v2/cloud_speech.proto'))
   })
   it('should export storagetransfer', function () {
     assert(googleProtoFiles.storagetransfer)
