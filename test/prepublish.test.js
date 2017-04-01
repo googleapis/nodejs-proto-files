@@ -34,7 +34,7 @@ describe('prepublish', function () {
   })
 
   it('should delete existing proto files', function () {
-    assert(childProcessMock.exec.calledWith('rm -r google'))
+    assert(childProcessMock.exec.calledWith('rm -rf google'))
   })
 
   it.skip('should download two blobs', function () {
