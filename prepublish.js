@@ -33,7 +33,7 @@ var extract = function (input, opts, callback) {
 
 async.series([
   function (next) {
-    require('child_process').exec('rm -r google', next)
+    require('child_process').exec('rm -rf google', next)
   },
 
   function (next) {
