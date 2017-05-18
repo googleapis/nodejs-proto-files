@@ -85,6 +85,10 @@ describe('google-proto-files', function () {
     assert(googleProtoFiles.storagetransfer)
     assert.equal(googleProtoFiles.storagetransfer.v1, resolve('storagetransfer/v1/transfer.proto'))
   })
+  it('should export videointelligence', function () {
+    assert(googleProtoFiles.videointelligence)
+    assert.equal(googleProtoFiles.videointelligence.v1beta1, resolve('cloud/videointelligence/v1beta1/video_intelligence.proto'))
+  })
   it('should export vision', function () {
     assert(googleProtoFiles.vision)
     assert.equal(googleProtoFiles.vision.v1, resolve('cloud/vision/v1/image_annotator.proto'))

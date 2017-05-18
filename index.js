@@ -91,6 +91,10 @@ module.exports.storagetransfer = {
   v1: googleProtoFiles('storagetransfer/v1/transfer.proto')
 }
 
+module.exports.videointelligence = {
+  v1beta1: googleProtoFiles('cloud/videointelligence/v1beta1/video_intelligence.proto')
+}
+
 module.exports.vision = {
   v1: googleProtoFiles('cloud/vision/v1/image_annotator.proto')
 }
