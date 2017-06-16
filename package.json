@@ -13,7 +13,7 @@
     "google/",
     "index.js"
   ],
-  "repository": "stephenplusplus/google-proto-files",
+  "repository": "googleapis/nodejs-proto-files",
   "keywords": [
     "google",
     "proto",
