@@ -57,7 +57,7 @@ async.series([
   },
 
   function (next) {
-    require('child_process').exec('cp -R overrides/* google', next)
+    require('child_process').exec('[ -d "overrides" ] && cp -R overrides/* google || echo "no overrides"', next)
   }
 ], function (err) {
   if (err) throw err
