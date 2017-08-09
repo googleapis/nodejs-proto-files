@@ -37,6 +37,10 @@ describe('google-proto-files', function () {
     assert.equal(googleProtoFiles.datastore.v1, resolve('datastore/v1/datastore.proto'))
     assert.equal(googleProtoFiles.datastore.v1beta3, resolve('datastore/v1beta3/datastore.proto'))
   })
+  it('should export dlp', function () {
+    assert(googleProtoFiles.dlp)
+    assert.equal(googleProtoFiles.dlp.v2beta1, resolve('privacy/dlp/v2beta1/dlp.proto'))
+  })
   it('should export functions', function () {
     assert(googleProtoFiles.functions)
     assert.equal(googleProtoFiles.functions.v1beta2, resolve('cloud/functions/v1beta2/functions.proto'))

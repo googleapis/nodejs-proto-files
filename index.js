@@ -37,6 +37,10 @@ module.exports.datastore = {
   v1beta3: googleProtoFiles('datastore/v1beta3/datastore.proto')
 }
 
+module.exports.dlp = {
+  v2beta1: googleProtoFiles('privacy/dlp/v2beta1/dlp.proto')
+}
+
 module.exports.functions = {
   v1beta2: googleProtoFiles('cloud/functions/v1beta2/functions.proto')
 }
