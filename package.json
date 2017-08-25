@@ -3,7 +3,7 @@
   "version": "0.13.0",
   "description": "All of the Google API's protocol buffer files",
   "scripts": {
-    "prepublish": "node ./prepublish.js",
+    "prepublishOnly": "node ./prepublish.js",
     "lint": "standard \"**/*.js\"",
     "mocha": "mocha -R spec test/*.test.js",
     "test": "npm run lint && npm run mocha"
