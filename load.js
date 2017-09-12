@@ -1,4 +1,6 @@
-var read = require('fs-readdir-recursive')
+'use strict'
+
+var globby = require('globby')
 var path = require('path')
 var protobuf = require('protobufjs')
 
@@ -13,17 +15,11 @@ var COMMON_PROTO_DIRS = [
   'type'
 ]
 
-var COMMON_PROTO_FILES = COMMON_PROTO_DIRS.map(function (dir) {
-  return path.join('google', dir)
-}).map(function (dir) {
-  return read(dir).map(function (filename) {
-    return path.join(dir, filename)
-  })
-}).reduce(function (accum, arr) {
-  return accum.concat(arr)
-}, []).filter(function (filename) {
-  return filename.endsWith('.proto')
+var COMMON_PROTO_GLOB_PATTERNS = COMMON_PROTO_DIRS.map(function (dir) {
+  return path.join('google', dir, '**', '*.proto')
 })
+
+var COMMON_PROTO_FILES = globby.sync(COMMON_PROTO_GLOB_PATTERNS)
 
 class GoogleProtoFilesRoot extends protobuf.Root {
   constructor () {
@@ -38,7 +34,7 @@ class GoogleProtoFilesRoot extends protobuf.Root {
       return includePath
     }
 
-    if (COMMON_PROTO_FILES.includes(includePath)) {
+    if (COMMON_PROTO_FILES.indexOf(includePath) > -1) {
       return path.join(__dirname, includePath)
     }
     return protobuf.util.path.resolve.apply(null, [].slice.call(arguments))

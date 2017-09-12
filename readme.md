@@ -1,4 +1,4 @@
-# nodejs-proto-files [![Build Status][build_img]][build_link]
+# google-proto-files [![Build Status][build_img]][build_link]
 
 > Get a copy of the [googleapis](https://github.com/google/googleapis) proto files into your project
 

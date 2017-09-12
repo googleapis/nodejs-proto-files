@@ -19,6 +19,7 @@ describe('load', function () {
     googleProtoFiles.load(TEST_FILE).then(function (root) {
       assert(root instanceof protobuf.Root)
       assert(root.lookup('google.example.library.v1.LibraryService') instanceof protobuf.Service)
+      assert(root.lookup('test.TestMessage') instanceof protobuf.Type)
       done()
     }).catch(done)
   })
@@ -26,17 +27,16 @@ describe('load', function () {
 
 describe('loadSync', function () {
   var TEST_FILE = path.join(__dirname, 'fixtures', 'library.proto')
-  // Skipping this test. For some reason protobufjs allows you to load a proto
-  // syncronously if it doesn't have access to its includes.
-  it.skip('should not be able to load test file using protobufjs directly', function () {
-    assert.throws(function () {
-      protobuf.loadSync(TEST_FILE)
-    }, Error)
+  it('should not be able to load test file using protobufjs directly', function () {
+    var root = protobuf.loadSync(TEST_FILE)
+    // Common proto that should not have been loaded.
+    assert.equal(root.lookup('google.api.Http', null))
   })
 
   it('should load a test file that relies on common protos', function () {
     var root = googleProtoFiles.loadSync(TEST_FILE)
     assert(root instanceof protobuf.Root)
     assert(root.lookup('google.example.library.v1.LibraryService') instanceof protobuf.Service)
+    assert(root.lookup('test.TestMessage') instanceof protobuf.Type)
   })
 })
