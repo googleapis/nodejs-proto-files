@@ -21,5 +21,19 @@ protoFiles.pubsub.v1
 // node_modules/google-proto-files/google/pubsub/v1/pubsub.proto
 ```
 
+### Load a proto which depends on google common protos.
+#### Asynchronously
+```js
+protoFiles.load('path/to/file.proto').then(function(root) {
+  var MyService = root.lookup('example.MyService')
+})
+```
+
+#### Synchronously
+```js
+var root = protoFiles.loadSync('path/to/file.proto');
+var MyService = root.lookup('example.MyService');
+```
+
 [build_img]: https://travis-ci.org/googleapis/nodejs-proto-files.svg?branch=master
 [build_link]: https://travis-ci.org/googleapis/nodejs-proto-files

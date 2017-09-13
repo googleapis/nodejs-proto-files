@@ -42,5 +42,9 @@
     "proxyquire": "^1.7.10",
     "sinon": "^1.17.5",
     "standard": "^7.1.2"
+  },
+  "dependencies": {
+    "globby": "^6.1.0",
+    "protobufjs": "^6.8.0"
   }
 }

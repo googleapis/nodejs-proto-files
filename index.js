@@ -1,11 +1,16 @@
 'use strict'
 
 var path = require('path')
+var loader = require('./load')
 
 var googleProtoFiles = module.exports = function () {
   var args = [].slice.call(arguments)
   return path.join.apply(null, [__dirname, 'google'].concat(args))
 }
+
+module.exports.load = loader.load
+
+module.exports.loadSync = loader.loadSync
 
 module.exports.appengine = {
   v1: googleProtoFiles('appengine/v1/appengine.proto')
