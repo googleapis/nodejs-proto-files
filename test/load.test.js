@@ -4,6 +4,7 @@ var assert = require('assert')
 var googleProtoFiles = require('../')
 var path = require('path')
 var protobuf = require('protobufjs')
+var proxyquire = require('proxyquire')
 
 var TEST_FILE = path.join(
     __dirname, 'fixtures', 'example', 'library', 'v1', 'library.proto')
@@ -39,5 +40,35 @@ describe('loadSync', function () {
     assert(root instanceof protobuf.Root)
     assert(root.lookup('google.example.library.v1.LibraryService') instanceof protobuf.Service)
     assert(root.lookup('test.TestMessage') instanceof protobuf.Type)
+  })
+})
+
+describe('GoogleProtoFilesRoot', function () {
+  describe('_findIncludePath', function () {
+    it('should throw an error if a file is not found', function () {
+      var findIncludePath = proxyquire('../load', {
+        fs: {
+          existsSync: function () { return false }
+        }
+      }).GoogleProtoFilesRoot._findIncludePath
+
+      assert.throws(
+          findIncludePath.bind(null, '/test/path/location', 'test/import.proto'))
+    })
+
+    it('should return the correct resolved import path', function () {
+      var correctPath = '/test/example/import.proto'
+      var findIncludePath = proxyquire('../load', {
+        fs: {
+          existsSync: function (path) {
+            return path === correctPath
+          }
+        }
+      }).GoogleProtoFilesRoot._findIncludePath
+
+      assert.equal(
+          findIncludePath('/test/path/location/', 'example/import.proto'),
+          correctPath)
+    })
   })
 })

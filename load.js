@@ -1,9 +1,9 @@
 'use strict'
 
+var fs = require('fs')
 var globby = require('globby')
 var path = require('path')
 var protobuf = require('protobufjs')
-var util = require('./util')
 
 var COMMON_PROTO_DIRS = [
   // This list of directories is defined here:
@@ -43,13 +43,27 @@ class GoogleProtoFilesRoot extends protobuf.Root {
     }
 
     try {
-      return util.findIncludePath(originPath, includePath)
+      return GoogleProtoFilesRoot._findIncludePath(originPath, includePath)
     } catch (e) {
       return protobuf.util.path.resolve.apply(
           null, [originPath, includePath])
     }
   }
+  static _findIncludePath (originPath, includePath) {
+    var current = originPath
+    var found = fs.existsSync(path.join(current, includePath))
+    while (!found && current.length > 0) {
+      current = current.substring(0, current.lastIndexOf('/'))
+      found = fs.existsSync(path.join(current, includePath))
+    }
+    if (!found) {
+      throw new Error('The include `' + includePath + '` was not found.')
+    }
+    return path.join(current, includePath)
+  }
 }
+
+module.exports.GoogleProtoFilesRoot = GoogleProtoFilesRoot
 
 module.exports.loadSync = function (filename) {
   return protobuf.loadSync(filename, new GoogleProtoFilesRoot())
