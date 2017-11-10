@@ -46,6 +46,14 @@ module.exports.dlp = {
   v2beta1: googleProtoFiles('privacy/dlp/v2beta1/dlp.proto')
 }
 
+module.exports.firestore = {
+  v1beta1: googleProtoFiles('firestore/v1beta1/firestore.proto')
+}
+
+module.exports.firestore.admin = {
+  v1beta1: googleProtoFiles('firestore/admin/v1beta1/firestore_admin.proto')
+}
+
 module.exports.functions = {
   v1beta2: googleProtoFiles('cloud/functions/v1beta2/functions.proto')
 }

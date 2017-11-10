@@ -41,6 +41,14 @@ describe('google-proto-files', function () {
     assert(googleProtoFiles.dlp)
     assert.equal(googleProtoFiles.dlp.v2beta1, resolve('privacy/dlp/v2beta1/dlp.proto'))
   })
+  it('should export firestore', function () {
+    assert(googleProtoFiles.firestore)
+    assert.equal(googleProtoFiles.firestore.v1beta1, resolve('firestore/v1beta1/firestore.proto'))
+  })
+  it('should export firestore admin', function () {
+    assert(googleProtoFiles.firestore.admin)
+    assert.equal(googleProtoFiles.firestore.admin.v1beta1, resolve('firestore/admin/v1beta1/firestore_admin.proto'))
+  })
   it('should export functions', function () {
     assert(googleProtoFiles.functions)
     assert.equal(googleProtoFiles.functions.v1beta2, resolve('cloud/functions/v1beta2/functions.proto'))
