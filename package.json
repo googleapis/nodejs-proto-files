@@ -11,7 +11,8 @@
   "main": "index.js",
   "files": [
     "google/",
-    "index.js"
+    "index.js",
+    "load.js"
   ],
   "repository": "googleapis/nodejs-proto-files",
   "keywords": [
