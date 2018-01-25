@@ -7,6 +7,9 @@ unit_tests: &unit_tests
         name: Install modules and dependencies.
         command: npm install
     - run:
+        name: Run prepublish (needed for tests)
+        command: npm run prepublishOnly
+    - run:
         name: Run unit tests.
         command: npm test
     - run:
@@ -62,7 +65,6 @@ workflows:
       - system_tests:
           requires:
             - lint
-            - docs
           filters:
             branches:
               only: master
@@ -70,7 +72,7 @@ workflows:
               only: /^v[\d.]+$/
       - publish_npm:
           requires:
-            - system_tests
+            - lint
           filters:
             branches:
               ignore: /.*/
@@ -134,45 +136,6 @@ jobs:
           command: npm run lint
           environment:
             NPM_CONFIG_PREFIX: /home/node/.npm-global
-
-  docs:
-    docker:
-      - image: node:8
-        user: node
-    steps:
-      - checkout
-      - run:
-          name: Install modules and dependencies.
-          command: npm install
-      - run:
-          name: Build documentation.
-          command: npm run docs
-
-  system_tests:
-    docker:
-      - image: node:8
-        user: node
-    steps:
-      - checkout
-      - run:
-          name: Decrypt credentials.
-          command: |
-            openssl aes-256-cbc -d -in .circleci/key.json.enc \
-                -out .circleci/key.json \
-                -k "${SYSTEM_TESTS_ENCRYPTION_KEY}"
-      - run:
-          name: Install modules and dependencies.
-          command: npm install
-      - run:
-          name: Run system tests.
-          command: npm run system-test
-          environment:
-            GCLOUD_PROJECT: long-door-651
-            GOOGLE_APPLICATION_CREDENTIALS: .circleci/key.json
-      - run:
-          name: Remove unencrypted key.
-          command: rm .circleci/key.json
-          when: always
 
   publish_npm:
     docker:

@@ -1,7 +1,7 @@
 {
   "name": "google-proto-files",
   "description": "All of the Google API's protocol buffer files",
-  "version": "0.14.1",
+  "version": "0.14.2",
   "license": "MIT",
   "author": "google-proto-files project authors",
   "engines": {
@@ -50,7 +50,6 @@
     "cover": "nyc --reporter=lcov mocha --require intelli-espower-loader test/*.js && nyc report",
     "test-no-cover": "repo-tools test run --cmd mocha -- test/*.js --no-timeouts",
     "prettier": "repo-tools exec -- prettier --write *.js test/*.js",
-    "docs": "repo-tools exec -- jsdoc -c .jsdoc.js"
   },
   "dependencies": {
     "globby": "^6.1.0",
