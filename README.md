@@ -7,14 +7,9 @@
 [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/googleapis/nodejs-proto-files?branch=master&svg=true)](https://ci.appveyor.com/project/googleapis/nodejs-proto-files)
 [![codecov](https://img.shields.io/codecov/c/github/googleapis/nodejs-proto-files/master.svg?style=flat)](https://codecov.io/gh/googleapis/nodejs-proto-files)
 
-> Node.js idiomatic client for [google-proto-files][product-docs].
+> Get a copy of the [googleapis](https://github.com/googleapis/googleapis) proto files into your project.
 
-Get a copy of the [googleapis](https://github.com/googleapis/googleapis) proto files into your project
-
-
-* [google-proto-files Node.js Client API Reference][client-docs]
 * [github.com/googleapis/nodejs-proto-files](https://github.com/googleapis/nodejs-proto-files)
-* [google-proto-files Documentation][product-docs]
 
 Read more about the client libraries for Cloud APIs, including the older
 Google APIs Client Libraries, in [Client Libraries Explained][explained].
@@ -23,46 +18,45 @@ Google APIs Client Libraries, in [Client Libraries Explained][explained].
 
 **Table of contents:**
 
-* [Quickstart](#quickstart)
-  * [Before you begin](#before-you-begin)
-  * [Installing the client library](#installing-the-client-library)
-  * [Using the client library](#using-the-client-library)
+* [Usage](#usage)
 * [Versioning](#versioning)
 * [Contributing](#contributing)
 * [License](#license)
 
-## Quickstart
+## Usage
 
-### Before you begin
+```sh
+$ npm install --save google-proto-files
+```
+```js
+var protoFiles = require('google-proto-files')
+```
 
-1.  Select or create a Cloud Platform project.
+### Get a directory path by executing as a function
+```js
+protoFiles('logging', 'v2')
+// node_modules/google-proto-files/google/logging/v2
+```
 
-    [Go to the projects page][projects]
+### Get a path to the entry proto file for a specific API version
+```js
+protoFiles.pubsub.v1
+// node_modules/google-proto-files/google/pubsub/v1/pubsub.proto
+```
 
-1.  Enable billing for your project.
+### Load a proto which depends on google common protos.
+#### Asynchronously
+```js
+protoFiles.load('path/to/file.proto').then(function(root) {
+  var MyService = root.lookup('example.MyService')
+})
+  ```
 
-    [Enable billing][billing]
-
-1.  Enable the googleapis Proto Files API.
-
-    [Enable the API][enable_api]
-
-1.  [Set up authentication with a service account][auth] so you can access the
-    API from your local workstation.
-
-[projects]: https://console.cloud.google.com/project
-[billing]: https://support.google.com/cloud/answer/6293499#enable-billing
-[enable_api]: https://console.cloud.google.com/flows/enableapi?apiid=N/A
-[auth]: https://cloud.google.com/docs/authentication/getting-started
-
-### Installing the client library
-
-    npm install --save google-proto-files
-
-
-
-The [google-proto-files Node.js Client API Reference][client-docs] documentation
-also contains samples.
+#### Synchronously
+```js
+var root = protoFiles.loadSync('path/to/file.proto');
+var MyService = root.lookup('example.MyService');
+```
 
 ## Versioning
 
@@ -85,7 +79,3 @@ Contributions welcome! See the [Contributing Guide](https://github.com/googleapi
 Apache Version 2.0
 
 See [LICENSE](https://github.com/googleapis/nodejs-proto-files/blob/master/LICENSE)
-
-[client-docs]: https://cloud.google.com/nodejs/docs/reference/common/latest/
-[product-docs]: N/A
-[shell_img]: http://gstatic.com/cloudssh/images/open-btn.png
