@@ -1,5 +1,7 @@
 # google-proto-files [![Build Status][build_img]][build_link]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/googleapis/nodejs-proto-files.svg)](https://greenkeeper.io/)
+
 > Get a copy of the [googleapis](https://github.com/google/googleapis) proto files into your project
 
 ```sh
