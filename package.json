@@ -55,10 +55,10 @@
     "globby": "^7.1.1",
     "power-assert": "^1.4.4",
     "prettier": "^1.10.2",
-    "protobufjs": "^6.8.0",
-    "@google-cloud/nodejs-repo-tools": "^2.1.4"
+    "protobufjs": "^6.8.0"
   },
   "devDependencies": {
+    "@google-cloud/nodejs-repo-tools": "^2.1.4",
     "async": "^2.6.0",
     "decompress-zip": "^0.3.0",
     "got": "^8.0.3",
