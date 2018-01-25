@@ -18,6 +18,10 @@ describe('load', function() {
       });
   });
 
+  // note: this test uses downloaded protos that should be installed
+  // before running the test. Please make sure to run
+  // `npm run prepublishOnly`
+  // before running `npm test`.
   it('should load a test file that relies on common protos', function(done) {
     googleProtoFiles
       .load(TEST_FILE)
