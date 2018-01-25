@@ -12,6 +12,7 @@ test_script:
   - node --version
   - npm --version
   - npm rebuild
+  - npm run prepublishOnly
   - npm test
 
 build: off
