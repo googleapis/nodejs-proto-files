@@ -1,20 +1,19 @@
 {
   "name": "google-proto-files",
-  "version": "0.14.1",
   "description": "All of the Google API's protocol buffer files",
-  "scripts": {
-    "prepublishOnly": "node ./prepublish.js",
-    "lint": "standard \"**/*.js\"",
-    "mocha": "mocha -R spec test/*.test.js",
-    "test": "npm run lint && npm run mocha"
+  "version": "0.14.1",
+  "license": "MIT",
+  "author": "google-proto-files project authors",
+  "engines": {
+    "node": ">=4.0.0"
   },
+  "repository": "googleapis/nodejs-proto-files",
   "main": "index.js",
   "files": [
     "google/",
     "index.js",
     "load.js"
   ],
-  "repository": "googleapis/nodejs-proto-files",
   "keywords": [
     "google",
     "proto",
@@ -33,19 +32,47 @@
       "overrides/"
     ]
   },
-  "author": "google-proto-files project authors",
-  "license": "MIT",
-  "devDependencies": {
-    "async": "^2.1.5",
-    "decompress-zip": "^0.2.0",
-    "got": "^5.4.0",
-    "mocha": "^3.0.2",
-    "proxyquire": "^1.7.10",
-    "sinon": "^1.17.5",
-    "standard": "^7.1.2"
+  "contributors": [
+    "Dave Gramlich <callmehiphop@gmail.com>",
+    "Ernest Landrito <landrito@google.com>",
+    "Evawere Ogbe <eoogbe@gmail.com>",
+    "Jason Dobry <jdobry@google.com>",
+    "Stephen Sawchuk <sawchuk@gmail.com>",
+    "Stephen Sawchuk <stephenplusplusplus@gmail.com>"
+  ],
+  "scripts": {
+    "generate-scaffolding": "repo-tools generate all",
+    "prepublishOnly": "node ./prepublish.js",
+    "lint": "repo-tools lint --cmd eslint -- ./ test/",
+    "mocha": "mocha -R spec test/*.test.js",
+    "test": "repo-tools test run --cmd npm -- run cover",
+    "cover": "nyc --reporter=lcov mocha --require intelli-espower-loader test/*.js && nyc report",
+    "test-no-cover": "repo-tools test run --cmd mocha -- test/*.js --no-timeouts",
+    "prettier": "repo-tools exec -- prettier --write *.js test/*.js",
+    "docs": "repo-tools exec -- jsdoc -c .jsdoc.js"
   },
   "dependencies": {
     "globby": "^6.1.0",
     "protobufjs": "^6.8.0"
+  },
+  "devDependencies": {
+    "@google-cloud/nodejs-repo-tools": "^2.1.4",
+    "async": "^2.6.0",
+    "codecov": "^3.0.0",
+    "decompress-zip": "^0.2.0",
+    "eslint": "^4.16.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-prettier": "^2.5.0",
+    "extend": "^3.0.1",
+    "got": "^5.4.0",
+    "intelli-espower-loader": "^1.0.1",
+    "mocha": "^3.5.3",
+    "nyc": "^11.4.1",
+    "power-assert": "^1.4.4",
+    "prettier": "^1.10.2",
+    "proxyquire": "^1.7.10",
+    "sinon": "^1.17.5",
+    "standard": "^7.1.2"
   }
 }
