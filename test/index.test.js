@@ -2,6 +2,7 @@
 
 var assert = require('assert');
 var path = require('path');
+
 var googleProtoFiles = require('../');
 
 function resolve(protoPath) {
