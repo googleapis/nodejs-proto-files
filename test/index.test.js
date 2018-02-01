@@ -74,11 +74,14 @@ describe('google-proto-files', function() {
       resolve('privacy/dlp/v2beta1/dlp.proto')
     );
   });
-  it('should export embedded_assistant', function() {
-    console.log(resolve('assistant/embedded/v1alpha2/embedded_assistant.proto'), googleProtoFiles.embedded_assistant.v1alpha2);
-    assert(googleProtoFiles.embedded_assistant);
+  it('should export embeddedAssistant', function() {
+    assert(googleProtoFiles.embeddedAssistant);
     assert.equal(
-      googleProtoFiles.embedded_assistant.v1alpha2,
+      googleProtoFiles.embeddedAssistant.v1alpha1,
+      resolve('assistant/embedded/v1alpha1/embedded_assistant.proto')
+    );
+    assert.equal(
+      googleProtoFiles.embeddedAssistant.v1alpha2,
       resolve('assistant/embedded/v1alpha2/embedded_assistant.proto')
     );
   });

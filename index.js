@@ -48,7 +48,7 @@ module.exports.dlp = {
   v2beta1: googleProtoFiles('privacy/dlp/v2beta1/dlp.proto'),
 };
 
-module.exports.embedded_assistant = {
+module.exports.embeddedAssistant = {
   v1alpha1: googleProtoFiles(
     'assistant/embedded/v1alpha1/embedded_assistant.proto'
   ),
