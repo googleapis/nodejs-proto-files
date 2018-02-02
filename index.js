@@ -48,6 +48,15 @@ module.exports.dlp = {
   v2beta1: googleProtoFiles('privacy/dlp/v2beta1/dlp.proto'),
 };
 
+module.exports.embeddedAssistant = {
+  v1alpha1: googleProtoFiles(
+    'assistant/embedded/v1alpha1/embedded_assistant.proto'
+  ),
+  v1alpha2: googleProtoFiles(
+    'assistant/embedded/v1alpha2/embedded_assistant.proto'
+  ),
+};
+
 module.exports.firestore = {
   v1beta1: googleProtoFiles('firestore/v1beta1/firestore.proto'),
 };
