@@ -73,6 +73,6 @@
     "prettier": "^1.10.2",
     "proxyquire": "^1.7.10",
     "sinon": "^4.2.1",
-    "standard": "^10.0.3"
+    "standard": "^11.0.0"
   }
 }
