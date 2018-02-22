@@ -52,7 +52,7 @@
     "prettier": "repo-tools exec -- prettier --write *.js test/*.js"
   },
   "dependencies": {
-    "globby": "^7.1.1",
+    "globby": "^8.0.0",
     "power-assert": "^1.4.4",
     "protobufjs": "^6.8.0"
   },
