@@ -71,7 +71,7 @@
     "mocha": "^5.0.0",
     "nyc": "^11.4.1",
     "prettier": "^1.10.2",
-    "proxyquire": "^1.7.10",
+    "proxyquire": "^2.0.0",
     "sinon": "^4.2.1",
     "standard": "^11.0.0"
   }
