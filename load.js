@@ -48,3 +48,15 @@ module.exports.loadSync = function(filename) {
 module.exports.load = function(filename) {
   return protobuf.load(filename, new GoogleProtoFilesRoot());
 };
+
+// module.exports.GoogleProtoFilesRoot = GoogleProtoFilesRoot;
+
+// module.exports.loadSync = function(filename, options) {
+//   const root = new GoogleProtoFilesRoot();
+//   return root.loadSync(filename, options);
+// };
+
+// module.exports.load = function(filename, options) {
+//   const root = new GoogleProtoFilesRoot();
+//   return root.load(filename, options);
+// };
