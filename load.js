@@ -41,10 +41,14 @@ class GoogleProtoFilesRoot extends protobuf.Root {
   }
 }
 
-module.exports.loadSync = function(filename) {
-  return protobuf.loadSync(filename, new GoogleProtoFilesRoot());
+module.exports.loadSync = function(filename, options) {
+  const root = new GoogleProtoFilesRoot();
+  return root.loadSync(filename, options);
 };
 
-module.exports.load = function(filename) {
-  return protobuf.load(filename, new GoogleProtoFilesRoot());
+module.exports.load = function(filename, options) {
+  const root = new GoogleProtoFilesRoot();
+  return root.load(filename, options);
 };
+
+module.exports.GoogleProtoFilesRoot = GoogleProtoFilesRoot;

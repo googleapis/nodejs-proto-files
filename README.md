@@ -44,6 +44,10 @@ protoFiles.pubsub.v1
 // node_modules/google-proto-files/google/pubsub/v1/pubsub.proto
 ```
 
+## load|loadSync(fileName, [options])
+
+### [options](https://github.com/dcodeIO/protobuf.js/blob/master/src/parse.js#L42-L44)
+
 ### Load a proto which depends on google common protos.
 #### Asynchronously
 ```js
