@@ -121,7 +121,6 @@ jobs:
             if ! test -x "$repo_tools"; then
               chmod +x "$repo_tools"
             fi
-            npm link
           environment:
             NPM_CONFIG_PREFIX: /home/node/.npm-global
       - run:
