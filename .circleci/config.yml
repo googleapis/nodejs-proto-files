@@ -69,12 +69,7 @@ jobs:
             fi
       - run:
           name: Install modules and dependencies.
-          command: |-
-            npm install
-            repo_tools="node_modules/@google-cloud/nodejs-repo-tools/bin/tools"
-            if ! test -x "$repo_tools"; then
-              chmod +x "$repo_tools"
-            fi
+          command: npm install
       - run:
           name: Run prepublish (needed for tests)
           command: npm run prepublishOnly
@@ -117,10 +112,6 @@ jobs:
           command: |
             mkdir -p /home/node/.npm-global
             npm install
-            repo_tools="node_modules/@google-cloud/nodejs-repo-tools/bin/tools"
-            if ! test -x "$repo_tools"; then
-              chmod +x "$repo_tools"
-            fi
           environment:
             NPM_CONFIG_PREFIX: /home/node/.npm-global
       - run:
@@ -139,12 +130,7 @@ jobs:
           command: 'echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc'
       - run:
           name: Install modules and dependencies.
-          command: |-
-            npm install
-            repo_tools="node_modules/@google-cloud/nodejs-repo-tools/bin/tools"
-            if ! test -x "$repo_tools"; then
-              chmod +x "$repo_tools"
-            fi
+          command: npm install
       - run:
           name: Publish the module to npm.
           command: npm publish --access=public
