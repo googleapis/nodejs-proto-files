@@ -5,7 +5,7 @@
   "license": "MIT",
   "author": "google-proto-files project authors",
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=6.0.0"
   },
   "repository": "googleapis/nodejs-proto-files",
   "main": "index.js",
