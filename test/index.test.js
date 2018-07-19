@@ -108,7 +108,10 @@ describe('google-proto-files', function() {
   });
   it('should export iam', function() {
     assert(googleProtoFiles.iam);
-    assert.strictEqual(googleProtoFiles.iam.v1, resolve('iam/v1/iam_policy.proto'));
+    assert.strictEqual(
+      googleProtoFiles.iam.v1,
+      resolve('iam/v1/iam_policy.proto')
+    );
   });
   it('should export iam admin', function() {
     assert(googleProtoFiles.iam.admin);
@@ -149,7 +152,10 @@ describe('google-proto-files', function() {
   });
   it('should export pubsub', function() {
     assert(googleProtoFiles.pubsub);
-    assert.strictEqual(googleProtoFiles.pubsub.v1, resolve('pubsub/v1/pubsub.proto'));
+    assert.strictEqual(
+      googleProtoFiles.pubsub.v1,
+      resolve('pubsub/v1/pubsub.proto')
+    );
     assert.strictEqual(
       googleProtoFiles.pubsub.v1beta2,
       resolve('pubsub/v1beta2/pubsub.proto')
