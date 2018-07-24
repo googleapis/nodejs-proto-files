@@ -63,7 +63,7 @@
     "codecov": "^3.0.0",
     "eslint": "^5.0.0",
     "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-node": "^6.0.0",
+    "eslint-plugin-node": "^7.0.0",
     "eslint-plugin-prettier": "^2.5.0",
     "intelli-espower-loader": "^1.0.1",
     "mocha": "^5.0.0",
