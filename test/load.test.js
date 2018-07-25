@@ -43,7 +43,7 @@ describe('loadSync', function() {
   it('should not be able to load test file using protobufjs directly', function() {
     var root = protobuf.loadSync(TEST_FILE);
     // Common proto that should not have been loaded.
-    assert.equal(root.lookup('google.api.Http', null));
+    assert.strictEqual(root.lookup('google.api.Http'), null);
   });
 
   it('should load a test file that relies on common protos', function() {
