@@ -1,8 +1,8 @@
 'use strict';
 
-var globby = require('globby');
-var path = require('path');
-var protobuf = require('protobufjs');
+const globby = require('globby');
+const path = require('path');
+const protobuf = require('protobufjs');
 
 let COMMON_PROTO_FILES;
 
@@ -14,7 +14,7 @@ class GoogleProtoFilesRoot extends protobuf.Root {
   // Caches and returns an array of the local common/google core proto files
   // exist on disk.
   static getCommonProtoFiles() {
-    var commonProtoDirs = [
+    const commonProtoDirs = [
       // This list of directories is defined here:
       // https://github.com/googleapis/googleapis/blob/master/gapic/packaging/common_protos.yaml
       'api',
@@ -25,7 +25,7 @@ class GoogleProtoFilesRoot extends protobuf.Root {
       'type',
     ];
 
-    var commonProtoGlobPatterns = commonProtoDirs.map(dir =>
+    const commonProtoGlobPatterns = commonProtoDirs.map(dir =>
       path.join(__dirname, 'google', dir, '**', '*.proto')
     );
 

@@ -1,8 +1,8 @@
 'use strict';
 
-var assert = require('assert');
-var proxyquire = require('proxyquire').noCallThru();
-var sinon = require('sinon');
+const assert = require('assert');
+const proxyquire = require('proxyquire').noCallThru();
+const sinon = require('sinon');
 
 function makeMockStream() {
   return {
@@ -11,15 +11,15 @@ function makeMockStream() {
   };
 }
 
-var childProcessMock = {
+const childProcessMock = {
   exec: sinon.stub(),
 };
 
-var gotMock = {
+const gotMock = {
   stream: sinon.stub().returns(makeMockStream()),
 };
 
-var decompressZipMock = sinon.stub();
+const decompressZipMock = sinon.stub();
 
 describe('prepublish', function() {
   before(function() {

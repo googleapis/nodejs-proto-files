@@ -29,7 +29,7 @@ Google APIs Client Libraries, in [Client Libraries Explained][explained].
 $ npm install --save google-proto-files
 ```
 ```js
-var protoFiles = require('google-proto-files')
+const protoFiles = require('google-proto-files')
 ```
 
 ### Get a directory path by executing as a function
@@ -52,14 +52,14 @@ protoFiles.pubsub.v1
 #### Asynchronously
 ```js
 protoFiles.load('path/to/file.proto').then(function(root) {
-  var MyService = root.lookup('example.MyService')
+  const MyService = root.lookup('example.MyService')
 })
   ```
 
 #### Synchronously
 ```js
-var root = protoFiles.loadSync('path/to/file.proto');
-var MyService = root.lookup('example.MyService');
+const root = protoFiles.loadSync('path/to/file.proto');
+const MyService = root.lookup('example.MyService');
 ```
 
 ## Versioning
