@@ -1,8 +1,8 @@
 'use strict';
 
-var assert = require('assert');
-var path = require('path');
-var googleProtoFiles = require('../');
+const assert = require('assert');
+const path = require('path');
+const googleProtoFiles = require('../');
 
 function resolve(protoPath) {
   return path.join(__dirname, '../google', protoPath);

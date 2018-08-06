@@ -1,13 +1,13 @@
 'use strict';
 
-var async = require('async');
-var DecompressZip = require('decompress-zip');
-var fs = require('fs');
-var got = require('got');
-var path = require('path');
+const async = require('async');
+const DecompressZip = require('decompress-zip');
+const fs = require('fs');
+const got = require('got');
+const path = require('path');
 
-var extract = function(input, opts, callback) {
-  var output = Math.random() + '.zip';
+const extract = function(input, opts, callback) {
+  const output = Math.random() + '.zip';
 
   got
     .stream(input)
@@ -15,7 +15,7 @@ var extract = function(input, opts, callback) {
     .pipe(fs.createWriteStream(output))
     .on('error', callback)
     .on('finish', function() {
-      var unzipper = new DecompressZip(output);
+      const unzipper = new DecompressZip(output);
 
       unzipper
         .on('error', callback)

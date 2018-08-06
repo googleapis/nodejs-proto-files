@@ -1,12 +1,12 @@
 'use strict';
 
-var assert = require('assert');
-var googleProtoFiles = require('../');
-var path = require('path');
-var protobuf = require('protobufjs');
+const assert = require('assert');
+const googleProtoFiles = require('../');
+const path = require('path');
+const protobuf = require('protobufjs');
 
 describe('load', function() {
-  var TEST_FILE = path.join(__dirname, 'fixtures', 'library.proto');
+  const TEST_FILE = path.join(__dirname, 'fixtures', 'library.proto');
   it('should not be able to load test file using protobufjs directly', function(done) {
     protobuf
       .load(TEST_FILE)
@@ -39,15 +39,15 @@ describe('load', function() {
 });
 
 describe('loadSync', function() {
-  var TEST_FILE = path.join(__dirname, 'fixtures', 'library.proto');
+  const TEST_FILE = path.join(__dirname, 'fixtures', 'library.proto');
   it('should not be able to load test file using protobufjs directly', function() {
-    var root = protobuf.loadSync(TEST_FILE);
+    const root = protobuf.loadSync(TEST_FILE);
     // Common proto that should not have been loaded.
     assert.strictEqual(root.lookup('google.api.Http'), null);
   });
 
   it('should load a test file that relies on common protos', function() {
-    var root = googleProtoFiles.loadSync(TEST_FILE);
+    const root = googleProtoFiles.loadSync(TEST_FILE);
     assert(root instanceof protobuf.Root);
     assert(
       root.lookup('google.example.library.v1.LibraryService') instanceof

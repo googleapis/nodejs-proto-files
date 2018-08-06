@@ -1,10 +1,10 @@
 'use strict';
 
-var path = require('path');
-var loader = require('./load');
+const path = require('path');
+const loader = require('./load');
 
-var googleProtoFiles = (module.exports = function() {
-  var args = [].slice.call(arguments);
+const googleProtoFiles = (module.exports = function() {
+  const args = [].slice.call(arguments);
   return path.join.apply(null, [__dirname, 'google'].concat(args));
 });
 

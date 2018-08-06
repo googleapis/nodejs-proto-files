@@ -3,13 +3,13 @@
 If a new API exists on `googleapis`, but is not yet available through `google-proto-files`, there is one decision to make before you proceed. Do you want to add a shortcut to it? A shortcut looks like:
 
 ```js
-var googleProtoFiles = require('google-proto-files')
+const googleProtoFiles = require('google-proto-files')
 
 // Shortcut:
-var datastorev1 = googleProtoFiles.datastore.v1
+const datastorev1 = googleProtoFiles.datastore.v1
 
 // Without shortcut:
-var datastorev1 = googleProtoFiles('datastore/v1/datastore.proto')
+const datastorev1 = googleProtoFiles('datastore/v1/datastore.proto')
 ```
 
 ### ✔️ Shortcut
