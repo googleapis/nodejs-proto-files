@@ -9,3 +9,4 @@ system-test/*key.json
 *.lock
 *-lock.js*
 google/
+package-lock.json
