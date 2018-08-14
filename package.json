@@ -61,7 +61,7 @@
     "codecov": "^3.0.0",
     "decompress-zip": "^0.3.0",
     "eslint": "^5.0.0",
-    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-prettier": "^3.0.0",
     "eslint-plugin-node": "^7.0.0",
     "eslint-plugin-prettier": "^2.5.0",
     "got": "^8.0.3",
