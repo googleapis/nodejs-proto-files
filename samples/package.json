@@ -1,0 +1,19 @@
+{
+  "description": "Samples for the nodejs-proto-files npm module.",
+  "license": "Apache-2.0",
+  "author": "Google LLC",
+  "engines": {
+    "node": ">=8"
+  },
+  "repository": "googleapis/nodejs-proto-files",
+  "private": true,
+  "scripts": {
+    "test": "mocha system-test"
+  },
+  "dependencies": {
+    "google-proto-files": "*"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
+}
