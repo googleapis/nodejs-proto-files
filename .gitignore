@@ -10,3 +10,5 @@ system-test/*key.json
 *-lock.js*
 google/
 package-lock.json
+build/
+.vscode/
