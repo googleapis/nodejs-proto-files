@@ -32,6 +32,7 @@
   "scripts": {
     "generate-scaffolding": "repo-tools generate all",
     "prepare": "node ./tools/prepublish.js",
+    "prepublish": "npm run prepare",
     "lint": "eslint '**/*.js'",
     "mocha": "nyc mocha",
     "test": "npm run cover",
