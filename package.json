@@ -33,7 +33,6 @@
   "scripts": {
     "generate-scaffolding": "repo-tools generate all",
     "prepare": "npm run compile && node ./build/tools/prepublish.js",
-    "prepublishOnly": "npm run prepare",
     "lint": "gts check && eslint '**/*.js'",
     "mocha": "nyc mocha build/test",
     "test": "npm run cover",
@@ -44,7 +43,7 @@
     "docs": "echo no docs 🤷‍♂️",
     "clean": "gts clean",
     "compile": "tsc -p .",
-    "pretest": "npm run compile"
+    "pretest": "npm run prepare && npm run compile"
   },
   "dependencies": {
     "globby": "^8.0.0",
