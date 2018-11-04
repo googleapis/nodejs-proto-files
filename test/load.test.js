@@ -1,7 +1,7 @@
 'use strict';
 
 const assert = require('assert');
-const googleProtoFiles = require('../');
+const googleProtoFiles = require('../src');
 const path = require('path');
 const protobuf = require('protobufjs');
 

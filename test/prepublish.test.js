@@ -23,7 +23,7 @@ const decompressZipMock = sinon.stub();
 
 describe('prepublish', function() {
   before(function() {
-    proxyquire('../prepublish', {
+    proxyquire('../tools/prepublish', {
       child_process: childProcessMock,
       'decompress-zip': decompressZipMock,
       fs: {

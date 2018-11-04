@@ -26,7 +26,7 @@ class GoogleProtoFilesRoot extends protobuf.Root {
     ];
 
     const commonProtoGlobPatterns = commonProtoDirs.map(dir =>
-      path.join(__dirname, 'google', dir, '**', '*.proto')
+      path.join(__dirname, '../', 'google', dir, '**', '*.proto')
     );
 
     if (!COMMON_PROTO_FILES) {
