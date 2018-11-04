@@ -22,11 +22,9 @@ export const bigtable = {
   v1: getProtoPath('bigtable/v1/bigtable_service.proto'),
   v2: getProtoPath('bigtable/v2/bigtable.proto'),
   admin: {
-    v1: getProtoPath(
-        'bigtable/admin/table/v1/bigtable_table_service.proto'),
+    v1: getProtoPath('bigtable/admin/table/v1/bigtable_table_service.proto'),
     v2: {
-      instance:
-          getProtoPath('bigtable/admin/v2/bigtable_instance_admin.proto'),
+      instance: getProtoPath('bigtable/admin/v2/bigtable_instance_admin.proto'),
       table: getProtoPath('bigtable/admin/v2/bigtable_table_admin.proto'),
     },
   }
@@ -118,8 +116,8 @@ export const storagetransfer = {
 };
 
 export const videointelligence = {
-  v1beta1: getProtoPath(
-      'cloud/videointelligence/v1beta1/video_intelligence.proto'),
+  v1beta1:
+      getProtoPath('cloud/videointelligence/v1beta1/video_intelligence.proto'),
 };
 
 export const vision = {
