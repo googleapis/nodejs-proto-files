@@ -5,7 +5,7 @@ const loader = require('./load');
 
 const googleProtoFiles = (module.exports = function() {
   const args = [].slice.call(arguments);
-  return path.join.apply(null, [__dirname, 'google'].concat(args));
+  return path.join.apply(null, [__dirname, '../', 'google'].concat(args));
 });
 
 module.exports.load = loader.load;

@@ -2,7 +2,7 @@
 
 const assert = require('assert');
 const path = require('path');
-const googleProtoFiles = require('../');
+const googleProtoFiles = require('../src');
 
 function resolve(protoPath) {
   return path.join(__dirname, '../google', protoPath);

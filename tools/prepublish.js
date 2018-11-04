@@ -40,7 +40,7 @@ async.series(
 
     function(next) {
       extract(
-        'https://github.com/google/googleapis/archive/master.zip',
+        'https://github.com/googleapis/googleapis/archive/master.zip',
         {
           strip: 1,
         },
