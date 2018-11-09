@@ -4,6 +4,30 @@
 
 [1]: https://www.npmjs.com/package/google-proto-files?activeTab=versions
 
+## v0.18.0
+
+11-09-2018 15:34 PST
+
+This is a minor service release, with a few internal changes.
+
+- refactor: use `walkdir` instead of `globby` ([#109](https://github.com/googleapis/nodejs-proto-files/pull/109))
+- chore: drop contributors from multiple places ([#108](https://github.com/googleapis/nodejs-proto-files/pull/108))
+- chore: use latest npm on Windows ([#107](https://github.com/googleapis/nodejs-proto-files/pull/107))
+- refactor: convert to typescript ([#106](https://github.com/googleapis/nodejs-proto-files/pull/106))
+- refactor: use a src/ directory ([#105](https://github.com/googleapis/nodejs-proto-files/pull/105))
+- chore: update CircleCI config ([#104](https://github.com/googleapis/nodejs-proto-files/pull/104))
+- chore: include build in eslintignore ([#101](https://github.com/googleapis/nodejs-proto-files/pull/101))
+- chore(deps): update dependency eslint-plugin-node to v8 ([#97](https://github.com/googleapis/nodejs-proto-files/pull/97))
+- chore: update issue templates ([#96](https://github.com/googleapis/nodejs-proto-files/pull/96))
+- chore: remove old issue template ([#94](https://github.com/googleapis/nodejs-proto-files/pull/94))
+- build: run tests on node11 ([#93](https://github.com/googleapis/nodejs-proto-files/pull/93))
+- chores(build): do not collect sponge.xml from windows builds ([#92](https://github.com/googleapis/nodejs-proto-files/pull/92))
+- chores(build): run codecov on continuous builds ([#91](https://github.com/googleapis/nodejs-proto-files/pull/91))
+- chore: update new issue template ([#90](https://github.com/googleapis/nodejs-proto-files/pull/90))
+- build: fix codecov uploading on Kokoro ([#86](https://github.com/googleapis/nodejs-proto-files/pull/86))
+- build: automate library with synth.py ([#85](https://github.com/googleapis/nodejs-proto-files/pull/85))
+- chore(deps): update dependency sinon to v7 ([#84](https://github.com/googleapis/nodejs-proto-files/pull/84))
+
 ## v0.17.0
 
 ### Breaking changes
