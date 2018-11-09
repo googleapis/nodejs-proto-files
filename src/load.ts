@@ -5,11 +5,11 @@
  * See file LICENSE for detail or copy at https://opensource.org/licenses/MIT
  */
 
-import * as globby from 'globby';
 import * as path from 'path';
 import * as protobuf from 'protobufjs';
+import * as walk from 'walkdir';
 
-let COMMON_PROTO_FILES;
+let COMMON_PROTO_FILES: string[];
 
 export interface GoogleProtoFilesRootOptions {
   // tslint:disable-next-line no-any
@@ -34,14 +34,16 @@ export class GoogleProtoFilesRoot extends protobuf.Root {
                    // on.
       'rpc',
       'type',
-    ];
-
-    const commonProtoGlobPatterns = commonProtoDirs.map(
-        dir => path.join(__dirname, '../../', 'google', dir, '**', '*.proto'));
+    ].map(dir => path.join(__dirname, '../../', 'google', dir));
 
     if (!COMMON_PROTO_FILES) {
-      COMMON_PROTO_FILES =
-          globby.sync(commonProtoGlobPatterns).map(path.normalize);
+      COMMON_PROTO_FILES = commonProtoDirs
+                               .map(dir => {
+                                 return (walk.sync(dir) as string[])
+                                     .filter(f => path.extname(f) === '.proto')
+                                     .map(path.normalize);
+                               })
+                               .reduce((a, c) => a.concat(c), []);
     }
 
     return COMMON_PROTO_FILES;
