@@ -21,15 +21,6 @@
     "protocol buffer",
     "grpc"
   ],
-  "contributors": [
-    "Alexander Fenster <fenster@google.com>",
-    "Dave Gramlich <callmehiphop@gmail.com>",
-    "Ernest Landrito <landrito@google.com>",
-    "Evawere Ogbe <eoogbe@gmail.com>",
-    "Jason Dobry <jdobry@google.com>",
-    "Stephen Sawchuk <sawchuk@gmail.com>",
-    "Stephen Sawchuk <stephenplusplusplus@gmail.com>"
-  ],
   "scripts": {
     "generate-scaffolding": "repo-tools generate all",
     "prepare": "npm run compile && node ./build/tools/prepublish.js",
