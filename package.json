@@ -37,8 +37,8 @@
     "pretest": "npm run prepare && npm run compile"
   },
   "dependencies": {
-    "globby": "^8.0.0",
-    "protobufjs": "^6.8.0"
+    "protobufjs": "^6.8.0",
+    "walkdir": "0.0.12"
   },
   "devDependencies": {
     "@google-cloud/nodejs-repo-tools": "^2.1.4",
