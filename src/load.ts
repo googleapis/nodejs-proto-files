@@ -37,12 +37,13 @@ export class GoogleProtoFilesRoot extends protobuf.Root {
     ].map(dir => path.join(__dirname, '../../', 'google', dir));
 
     if (!COMMON_PROTO_FILES) {
-      COMMON_PROTO_FILES = commonProtoDirs.map(dir => {
-        return (walk.sync(dir) as string[])
-            .filter(f => path.extname(f) === '.proto')
-            .map(path.normalize);
-      })
-      .reduce((a, c) => a.concat(c), []);
+      COMMON_PROTO_FILES = commonProtoDirs
+                               .map(dir => {
+                                 return (walk.sync(dir) as string[])
+                                     .filter(f => path.extname(f) === '.proto')
+                                     .map(path.normalize);
+                               })
+                               .reduce((a, c) => a.concat(c), []);
     }
 
     return COMMON_PROTO_FILES;
