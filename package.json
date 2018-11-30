@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "protobufjs": "^6.8.0",
+    "util": "^0.11.1",
     "walkdir": "0.0.12"
   },
   "devDependencies": {
