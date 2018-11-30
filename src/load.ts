@@ -51,7 +51,7 @@ export class GoogleProtoFilesRoot extends protobuf.Root {
 
   // Causes the loading of an included proto to check if it is a common
   // proto. If it is a common proto, use the google-proto-files proto.
-  resolvePath(_: {}, includePath: string) {
+  resolvePath(_: string, includePath: string, alreadyNormalized?: boolean) {
     includePath = path.normalize(includePath);
 
     // Fully qualified paths don't need to be resolved.
@@ -67,7 +67,7 @@ export class GoogleProtoFilesRoot extends protobuf.Root {
       return fullIncludePath;
     }
 
-    return protobuf.util.path.resolve.apply(null, [].slice.call(arguments));
+    return protobuf.util.path.resolve(_, includePath, alreadyNormalized);
   }
 }
 
