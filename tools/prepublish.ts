@@ -37,44 +37,36 @@ const extract = (input, opts, callback) => {
       });
 };
 
-async.series(
-    [
-      (next) => {
-        require('child_process').exec('rm -rf google', next);
-      },
+async function main() {
+  await require('child_process').exec('rm -rf google');
 
-      (next) => {
-        extract(
-            'https://github.com/googleapis/googleapis/archive/master.zip', {
-              strip: 1,
-            },
-            next);
+  await extract(
+      'https://github.com/googleapis/googleapis/archive/master.zip', {
+        strip: 1,
       },
+      () => {});
 
-      (next) => {
-        extract(
-            'https://github.com/google/protobuf/archive/master.zip', {
-              strip: 2,
-              filter: (file) => {
-                return (
-                    file.parent.indexOf('protobuf-master') === 0 &&
-                    file.parent.indexOf('protobuf-master/src/') === 0 &&
-                    file.parent.indexOf('/compiler') === -1 &&
-                    file.parent.indexOf('/internal') === -1 &&
-                    file.filename.indexOf('unittest') === -1 &&
-                    file.filename.indexOf('test') === -1);
-              },
-            },
-            next);
+  await extract(
+      'https://github.com/google/protobuf/archive/master.zip', {
+        strip: 2,
+        filter: (file) => {
+          return (
+              file.parent.indexOf('protobuf-master') === 0 &&
+              file.parent.indexOf('protobuf-master/src/') === 0 &&
+              file.parent.indexOf('/compiler') === -1 &&
+              file.parent.indexOf('/internal') === -1 &&
+              file.filename.indexOf('unittest') === -1 &&
+              file.filename.indexOf('test') === -1);
+        },
       },
+      () => {});
 
-      (next) => {
-        require('child_process')
-            .exec(
-                '[ -d "overrides" ] && cp -R overrides/* google || echo "no overrides"',
-                next);
-      },
-    ],
-    (err) => {
-      if (err) throw err;
-    });
+  await require('child_process')
+      .exec(
+          '[ -d "overrides" ] && cp -R overrides/* google || echo "no overrides"',
+          () => {});
+}
+
+main().catch(err => {
+  if (err) throw err;
+});
