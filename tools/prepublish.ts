@@ -4,11 +4,10 @@
  * Distributed under MIT license.
  * See file LICENSE for detail or copy at https://opensource.org/licenses/MIT
  */
-
-import * as async from 'async';
 import * as fs from 'fs';
 import * as got from 'got';
 import * as path from 'path';
+import {promisify} from 'util';
 
 // tslint:disable-next-line variable-name
 const DecompressZip = require('decompress-zip');
@@ -37,34 +36,32 @@ const extract = (input, opts, callback) => {
       });
 };
 
-async function main() {
-  await require('child_process').exec('rm -rf google');
+const extractAsync = promisify(extract);
+const exec = promisify(require('child_process').exec);
 
-  await extract(
+async function main() {
+  await exec('rm -rf google');
+
+  await extractAsync(
       'https://github.com/googleapis/googleapis/archive/master.zip', {
         strip: 1,
-      },
-      () => {});
+      });
 
-  await extract(
-      'https://github.com/google/protobuf/archive/master.zip', {
-        strip: 2,
-        filter: (file) => {
-          return (
-              file.parent.indexOf('protobuf-master') === 0 &&
-              file.parent.indexOf('protobuf-master/src/') === 0 &&
-              file.parent.indexOf('/compiler') === -1 &&
-              file.parent.indexOf('/internal') === -1 &&
-              file.filename.indexOf('unittest') === -1 &&
-              file.filename.indexOf('test') === -1);
-        },
-      },
-      () => {});
+  await extractAsync('https://github.com/google/protobuf/archive/master.zip', {
+    strip: 2,
+    filter: (file) => {
+      return (
+          file.parent.indexOf('protobuf-master') === 0 &&
+          file.parent.indexOf('protobuf-master/src/') === 0 &&
+          file.parent.indexOf('/compiler') === -1 &&
+          file.parent.indexOf('/internal') === -1 &&
+          file.filename.indexOf('unittest') === -1 &&
+          file.filename.indexOf('test') === -1);
+    },
+  });
 
-  await require('child_process')
-      .exec(
-          '[ -d "overrides" ] && cp -R overrides/* google || echo "no overrides"',
-          () => {});
+  await exec(
+      '[ -d "overrides" ] && cp -R overrides/* google || echo "no overrides"');
 }
 
 main().catch(err => {
