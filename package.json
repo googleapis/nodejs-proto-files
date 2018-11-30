@@ -37,8 +37,8 @@
     "pretest": "npm run prepare && npm run compile"
   },
   "dependencies": {
+    "@google-cloud/promisify": "^0.3.1",
     "protobufjs": "^6.8.0",
-    "util": "^0.11.1",
     "walkdir": "0.0.12"
   },
   "devDependencies": {
