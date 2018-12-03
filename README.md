@@ -3,8 +3,7 @@
 # [googleapis Proto Files: Node.js Client](https://github.com/googleapis/nodejs-proto-files)
 
 [![release level](https://img.shields.io/badge/release%20level-alpha-orange.svg?style&#x3D;flat)](https://cloud.google.com/terms/launch-stages)
-[![CircleCI](https://img.shields.io/circleci/project/github/googleapis/nodejs-proto-files.svg?style=flat)](https://circleci.com/gh/googleapis/nodejs-proto-files)
-[![AppVeyor](https://ci.appveyor.com/api/projects/status/github/googleapis/nodejs-proto-files?branch=master&svg=true)](https://ci.appveyor.com/project/googleapis/nodejs-proto-files)
+[![npm version](https://img.shields.io/npm/v/google-proto-files.svg)](https://www.npmjs.org/package/google-proto-files)
 [![codecov](https://img.shields.io/codecov/c/github/googleapis/nodejs-proto-files/master.svg?style=flat)](https://codecov.io/gh/googleapis/nodejs-proto-files)
 
 > Get a copy of the [googleapis](https://github.com/googleapis/googleapis) proto files into your project.
@@ -83,3 +82,4 @@ Contributions welcome! See the [Contributing Guide](https://github.com/googleapi
 Apache Version 2.0
 
 See [LICENSE](https://github.com/googleapis/nodejs-proto-files/blob/master/LICENSE)
+
