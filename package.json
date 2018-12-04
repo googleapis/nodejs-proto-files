@@ -26,7 +26,7 @@
     "prepare": "npm run compile && node ./build/tools/prepublish.js",
     "lint": "gts check && eslint '**/*.js'",
     "mocha": "nyc mocha build/test",
-    "test": "npm run cover",
+    "test": "nyc mocha",
     "cover": "nyc --reporter=lcov mocha build/test && nyc report",
     "fix": "gts fix && eslint --fix '**/*.js'",
     "system-test": "echo no system tests 😱",
