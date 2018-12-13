@@ -37,10 +37,10 @@ const extract = (input, opts, callback) => {
 };
 
 const extractAsync = promisify(extract);
-const exec = promisify(require('child_process').exec);
+const execAsync = promisify(require('child_process').exec);
 
 async function main() {
-  await exec('rm -rf google');
+  await execAsync('rm -rf google');
 
   await extractAsync(
       'https://github.com/googleapis/googleapis/archive/master.zip', {
@@ -60,10 +60,8 @@ async function main() {
     },
   });
 
-  await exec(
+  await execAsync(
       '[ -d "overrides" ] && cp -R overrides/* google || echo "no overrides"');
 }
 
-main().catch(err => {
-  if (err) throw err;
-});
+main();
