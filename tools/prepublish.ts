@@ -64,4 +64,4 @@ async function main() {
       '[ -d "overrides" ] && cp -R overrides/* google || echo "no overrides"');
 }
 
-main();
+main().catch(console.error);
