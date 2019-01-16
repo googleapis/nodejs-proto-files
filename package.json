@@ -31,7 +31,7 @@
     "fix": "gts fix && eslint --fix '**/*.js'",
     "system-test": "echo no system tests 😱",
     "samples-test": "echo no sample tests 😱",
-    "docs": "echo no docs 🤷‍♂️",
+    "docs": "compodoc src/",
     "clean": "gts clean",
     "compile": "tsc -p .",
     "pretest": "npm run prepare && npm run compile"
@@ -42,6 +42,7 @@
     "walkdir": "0.0.12"
   },
   "devDependencies": {
+    "@compodoc/compodoc": "^1.1.7",
     "@google-cloud/nodejs-repo-tools": "^3.0.0",
     "@types/async": "^2.0.50",
     "@types/got": "^9.2.0",
