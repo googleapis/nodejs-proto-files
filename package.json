@@ -34,7 +34,9 @@
     "docs": "compodoc src/",
     "clean": "gts clean",
     "compile": "tsc -p .",
-    "pretest": "npm run prepare && npm run compile"
+    "pretest": "npm run prepare && npm run compile",
+    "docs-test": "blcl docs -r --exclude www.googleapis.com",
+    "predocs-test": "npm run docs"
   },
   "dependencies": {
     "@google-cloud/promisify": "^0.3.1",
@@ -65,6 +67,7 @@
     "proxyquire": "^2.0.0",
     "sinon": "^7.0.0",
     "source-map-support": "^0.5.9",
-    "typescript": "~3.3.0"
+    "typescript": "~3.3.0",
+    "broken-link-checker-local": "^0.2.0"
   }
 }
