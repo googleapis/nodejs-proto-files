@@ -1,37 +1,55 @@
-## Adding a new API
+# How to become a contributor and submit your own code
 
-If a new API exists on `googleapis`, but is not yet available through `google-proto-files`, there is one decision to make before you proceed. Do you want to add a shortcut to it? A shortcut looks like:
+**Table of contents**
 
-```js
-const googleProtoFiles = require('google-proto-files')
+* [Contributor License Agreements](#contributor-license-agreements)
+* [Contributing a patch](#contributing-a-patch)
+* [Running the tests](#running-the-tests)
+* [Releasing the library](#releasing-the-library)
 
-// Shortcut:
-const datastorev1 = googleProtoFiles.datastore.v1
+## Contributor License Agreements
 
-// Without shortcut:
-const datastorev1 = googleProtoFiles('datastore/v1/datastore.proto')
-```
+We'd love to accept your sample apps and patches! Before we can take them, we
+have to jump a couple of legal hurdles.
 
-### ✔️ Shortcut
+Please fill out either the individual or corporate Contributor License Agreement
+(CLA).
 
-- Edit `index.js`, following the convention that exists in the file already.
-- Edit `test/index.test.js`, again following the convention that exists in the file already.
-- Run the tests:
-  ```sh
-  $ npm test
-  ```
-- Commit the changes
-- Publish the module:
-  ```sh
-  $ npm version minor
-  $ npm publish
-  $ git push origin master --follow-tags
-  ```
+  * If you are an individual writing original source code and you're sure you
+    own the intellectual property, then you'll need to sign an [individual CLA](https://developers.google.com/open-source/cla/individual).
+  * If you work for a company that wants to allow you to contribute your work,
+    then you'll need to sign a [corporate CLA](https://developers.google.com/open-source/cla/corporate).
 
-### ❌ Shortcut
+Follow either of the two links above to access the appropriate CLA and
+instructions for how to sign and return it. Once we receive it, we'll be able to
+accept your pull requests.
 
-```sh
-$ npm version patch
-$ npm publish
-$ git push origin master --follow-tags
-```
+## Contributing A Patch
+
+1.  Submit an issue describing your proposed change to the repo in question.
+1.  The repo owner will respond to your issue promptly.
+1.  If your proposed change is accepted, and you haven't already done so, sign a
+    Contributor License Agreement (see details above).
+1.  Fork the desired repo, develop and test your code changes.
+1.  Ensure that your code adheres to the existing style in the code to which
+    you are contributing.
+1.  Ensure that your code has an appropriate set of tests which all pass.
+1.  Submit a pull request.
+
+## Running the tests
+
+1.  [Prepare your environment for Node.js setup][setup].
+
+1.  Install dependencies:
+
+        npm install
+
+1.  Run the tests:
+
+        npm test
+
+1.  Lint (and maybe fix) any changes:
+
+        npm run fix
+
+[setup]: https://cloud.google.com/nodejs/docs/setup
