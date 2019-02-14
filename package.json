@@ -35,7 +35,7 @@
     "clean": "gts clean",
     "compile": "tsc -p .",
     "pretest": "npm run prepare && npm run compile",
-    "docs-test": "blcl docs -r --exclude www.googleapis.com",
+    "docs-test": "linkinator docs -r --skip www.googleapis.com",
     "predocs-test": "npm run docs"
   },
   "dependencies": {
@@ -68,6 +68,6 @@
     "sinon": "^7.0.0",
     "source-map-support": "^0.5.9",
     "typescript": "~3.3.0",
-    "broken-link-checker-local": "^0.2.0"
+    "linkinator": "^1.1.2"
   }
 }
