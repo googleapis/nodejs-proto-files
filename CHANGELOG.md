@@ -4,6 +4,61 @@
 
 [1]: https://www.npmjs.com/package/google-proto-files?activeTab=versions
 
+## v0.19.0
+
+03-13-2019 14:17 PDT
+
+### Implementation Changes
+
+- refactor: removed async module dependency ([#120](https://github.com/googleapis/nodejs-proto-files/pull/120))
+
+### New Features
+
+- Now the package includes new common proto file, `google/api/resource.proto`.
+
+### Dependencies
+
+- chore(deps): update dependency @google-cloud/nodejs-repo-tools to v3 ([#111](https://github.com/googleapis/nodejs-proto-files/pull/111))
+- chore(deps): update dependency gts to ^0.9.0 ([#113](https://github.com/googleapis/nodejs-proto-files/pull/113))
+- fix: Pin @types/sinon to last compatible version ([#116](https://github.com/googleapis/nodejs-proto-files/pull/116))
+- chore(deps): update dependency @types/sinon to v5.0.7 ([#117](https://github.com/googleapis/nodejs-proto-files/pull/117))
+- chore(deps): update dependency typescript to ~3.2.0 ([#119](https://github.com/googleapis/nodejs-proto-files/pull/119))
+- chore(deps): update dependency @types/sinon to v7 ([#137](https://github.com/googleapis/nodejs-proto-files/pull/137))
+- chore(deps): update dependency eslint-config-prettier to v4 ([#141](https://github.com/googleapis/nodejs-proto-files/pull/141))
+- fix(deps): update dependency walkdir to v0.1.0 ([#143](https://github.com/googleapis/nodejs-proto-files/pull/143))
+- fix(deps): update dependency walkdir to v0.2.0 ([#145](https://github.com/googleapis/nodejs-proto-files/pull/145))
+- fix(deps): update dependency walkdir to ^0.3.0 ([#148](https://github.com/googleapis/nodejs-proto-files/pull/148))
+- fix(deps): update dependency @google-cloud/promisify to ^0.4.0 ([#153](https://github.com/googleapis/nodejs-proto-files/pull/153))
+
+
+### Documentation
+
+- docs: update readme badges ([#123](https://github.com/googleapis/nodejs-proto-files/pull/123))
+- docs: add lint/fix example to contributing guide ([#144](https://github.com/googleapis/nodejs-proto-files/pull/144))
+- docs: update contributing path in README ([#147](https://github.com/googleapis/nodejs-proto-files/pull/147))
+- docs: update links in contrib guide ([#155](https://github.com/googleapis/nodejs-proto-files/pull/155))
+
+### Internal / Testing Changes
+
+- chore: update eslintignore config ([#112](https://github.com/googleapis/nodejs-proto-files/pull/112))
+- fix(build): fix system key decryption ([#121](https://github.com/googleapis/nodejs-proto-files/pull/121))
+- chore: update license file ([#125](https://github.com/googleapis/nodejs-proto-files/pull/125))
+- chore: nyc ignore build/test by default ([#127](https://github.com/googleapis/nodejs-proto-files/pull/127))
+- chore: always nyc report before calling codecov ([#128](https://github.com/googleapis/nodejs-proto-files/pull/128))
+- build: add Kokoro configs for autorelease ([#131](https://github.com/googleapis/nodejs-proto-files/pull/131))
+- fix(build): fix Kokoro release script ([#132](https://github.com/googleapis/nodejs-proto-files/pull/132))
+- chore: fix publish.sh permission +x ([#133](https://github.com/googleapis/nodejs-proto-files/pull/133))
+- chore: update nyc and eslint configs ([#135](https://github.com/googleapis/nodejs-proto-files/pull/135))
+- chore(build): inject yoshi automation key ([#136](https://github.com/googleapis/nodejs-proto-files/pull/136))
+- build: check for 404s on all docs ([#139](https://github.com/googleapis/nodejs-proto-files/pull/139))
+- build: ignore googleapis.com in doc link check ([#140](https://github.com/googleapis/nodejs-proto-files/pull/140))
+- build: test using @grpc/grpc-js in CI ([#150](https://github.com/googleapis/nodejs-proto-files/pull/150))
+- build: create docs test npm scripts ([#151](https://github.com/googleapis/nodejs-proto-files/pull/151))
+- build: use linkinator for docs test ([#152](https://github.com/googleapis/nodejs-proto-files/pull/152))
+- build: exclude CONTRIBUTING.md from synthing ([#154](https://github.com/googleapis/nodejs-proto-files/pull/154))
+- build: use node10 to run samples-test, system-test etc ([#158](https://github.com/googleapis/nodejs-proto-files/pull/158))
+- build: Add docuploader credentials to node publish jobs ([#159](https://github.com/googleapis/nodejs-proto-files/pull/159))
+
 ## v0.18.0
 
 11-09-2018 15:34 PST
