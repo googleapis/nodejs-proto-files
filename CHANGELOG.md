@@ -4,6 +4,17 @@
 
 [1]: https://www.npmjs.com/package/google-proto-files?activeTab=versions
 
+## v0.20.0
+
+03-15-2019 11:15 PDT
+
+This release includes updated proto files from 
+[googleapis/googleapis](https://github.com/googleapis/googleapis).
+
+### Internal / Testing Changes
+
+- build: use per-repo npm publish token ([#162](https://github.com/googleapis/nodejs-proto-files/pull/162))
+
 ## v0.19.0
 
 03-13-2019 14:17 PDT

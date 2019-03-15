@@ -11,7 +11,7 @@
     "test": "mocha system-test"
   },
   "dependencies": {
-    "google-proto-files": "^0.19.0"
+    "google-proto-files": "^0.20.0"
   },
   "devDependencies": {
     "mocha": "^6.0.0"
