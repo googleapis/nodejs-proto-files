@@ -14,8 +14,8 @@
 All of the Google API's protocol buffer files
 
 
-* [Google APIs Proto Files Node.js Client API Reference][client-docs]
-* [Google APIs Proto Files Documentation][product-docs]
+
+
 * [github.com/googleapis/nodejs-proto-files](https://github.com/googleapis/nodejs-proto-files)
 
 Read more about the client libraries for Cloud APIs, including the older
@@ -26,18 +26,16 @@ Google APIs Client Libraries, in [Client Libraries Explained][explained].
 **Table of contents:**
 
 
+* [Quickstart](#quickstart)
+
+  * [Installing the client library](#installing-the-client-library)
+
+
 * [Versioning](#versioning)
 * [Contributing](#contributing)
 * [License](#license)
 
 ## Quickstart
-
-### Before you begin
-
-1.  [Select or create a Cloud Platform project][projects].
-1.  [Enable the Google APIs Proto Files API][enable_api].
-1.  [Set up authentication with a service account][auth] so you can access the
-    API from your local workstation.
 
 ### Installing the client library
 
@@ -48,9 +46,6 @@ npm install google-proto-files
 
 
 
-
-The [Google APIs Proto Files Node.js Client API Reference][client-docs] documentation
-also contains samples.
 
 ## Versioning
 
@@ -81,10 +76,10 @@ Apache Version 2.0
 
 See [LICENSE](https://github.com/googleapis/nodejs-proto-files/blob/master/LICENSE)
 
-[client-docs]: 
-[product-docs]: https://cloud.google.com/nodejs/docs/reference/common/latest/
+
+
 [shell_img]: https://gstatic.com/cloudssh/images/open-btn.png
 [projects]: https://console.cloud.google.com/project
 [billing]: https://support.google.com/cloud/answer/6293499#enable-billing
-[enable_api]: https://console.cloud.google.com/flows/enableapi?apiid=
+
 [auth]: https://cloud.google.com/docs/authentication/getting-started
