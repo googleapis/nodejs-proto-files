@@ -1,0 +1,9 @@
+{
+  "name": "nodejs-proto-files",
+  "name_pretty": "Google APIs Proto Files",
+  "release_level": "ga",
+  "language": "nodejs",
+  "repo": "googleapis/nodejs-proto-files",
+  "distribution_name": "google-proto-files",
+  "requires_billing": false
+}

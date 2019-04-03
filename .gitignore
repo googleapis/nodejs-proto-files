@@ -3,12 +3,10 @@
 .coverage
 .nyc_output
 docs/
-out/
-system-test/secrets.js
-system-test/*key.json
 *.lock
 *-lock.js*
 google/
 package-lock.json
 build/
 .vscode/
+__pycache__
