@@ -30,20 +30,20 @@ export class GoogleProtoFilesRoot extends protobuf.Root {
       'api',
       path.join('logging', 'type'),
       'longrunning',
-      'protobuf',  // This is an additional path that the common protos depend
-                   // on.
+      'protobuf', // This is an additional path that the common protos depend
+      // on.
       'rpc',
       'type',
     ].map(dir => path.join(__dirname, '../../', 'google', dir));
 
     if (!COMMON_PROTO_FILES) {
       COMMON_PROTO_FILES = commonProtoDirs
-                               .map(dir => {
-                                 return (walk.sync(dir) as string[])
-                                     .filter(f => path.extname(f) === '.proto')
-                                     .map(path.normalize);
-                               })
-                               .reduce((a, c) => a.concat(c), []);
+        .map(dir => {
+          return (walk.sync(dir) as string[])
+            .filter(f => path.extname(f) === '.proto')
+            .map(path.normalize);
+        })
+        .reduce((a, c) => a.concat(c), []);
     }
 
     return COMMON_PROTO_FILES;
@@ -59,8 +59,10 @@ export class GoogleProtoFilesRoot extends protobuf.Root {
       return includePath;
     }
 
-    const fullIncludePath =
-        path.join(__dirname, path.relative(__dirname, includePath));
+    const fullIncludePath = path.join(
+      __dirname,
+      path.relative(__dirname, includePath)
+    );
     const commonProtoFiles = GoogleProtoFilesRoot.getCommonProtoFiles();
 
     if (commonProtoFiles.indexOf(fullIncludePath) > -1) {

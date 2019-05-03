@@ -27,7 +27,7 @@ export const bigtable = {
       instance: getProtoPath('bigtable/admin/v2/bigtable_instance_admin.proto'),
       table: getProtoPath('bigtable/admin/v2/bigtable_table_admin.proto'),
     },
-  }
+  },
 };
 
 export const cloudtrace = {
@@ -48,17 +48,19 @@ export const dlp = {
 };
 
 export const embeddedAssistant = {
-  v1alpha1:
-      getProtoPath('assistant/embedded/v1alpha1/embedded_assistant.proto'),
-  v1alpha2:
-      getProtoPath('assistant/embedded/v1alpha2/embedded_assistant.proto'),
+  v1alpha1: getProtoPath(
+    'assistant/embedded/v1alpha1/embedded_assistant.proto'
+  ),
+  v1alpha2: getProtoPath(
+    'assistant/embedded/v1alpha2/embedded_assistant.proto'
+  ),
 };
 
 export const firestore = {
   v1beta1: getProtoPath('firestore/v1beta1/firestore.proto'),
   admin: {
     v1beta1: getProtoPath('firestore/admin/v1beta1/firestore_admin.proto'),
-  }
+  },
 };
 
 export const functions = {
@@ -69,7 +71,7 @@ export const iam = {
   v1: getProtoPath('iam/v1/iam_policy.proto'),
   admin: {
     v1: getProtoPath('iam/admin/v1/iam.proto'),
-  }
+  },
 };
 
 export const language = {
@@ -98,11 +100,13 @@ export const spanner = {
   admin: {
     v1: {
       database: getProtoPath(
-          'spanner/admin/database/v1/spanner_database_admin.proto'),
+        'spanner/admin/database/v1/spanner_database_admin.proto'
+      ),
       instance: getProtoPath(
-          'spanner/admin/instance/v1/spanner_instance_admin.proto'),
+        'spanner/admin/instance/v1/spanner_instance_admin.proto'
+      ),
     },
-  }
+  },
 };
 
 export const speech = {
@@ -116,8 +120,9 @@ export const storagetransfer = {
 };
 
 export const videointelligence = {
-  v1beta1:
-      getProtoPath('cloud/videointelligence/v1beta1/video_intelligence.proto'),
+  v1beta1: getProtoPath(
+    'cloud/videointelligence/v1beta1/video_intelligence.proto'
+  ),
 };
 
 export const vision = {
