@@ -44,11 +44,13 @@ describe('prepublish', () => {
     assert(childProcessMock.exec.calledWith('rm -rf google'));
   });
 
+  // tslint:disable-next-line ban
   it.skip('should download two blobs', () => {
-    childProcessMock.exec.callArg(1);  // callback()
+    childProcessMock.exec.callArg(1); // callback()
     assert(gotMock.stream.calledTwice);
   });
 
+  // tslint:disable-next-line ban
   it.skip('should copy overrides to google directory', () => {
     assert(childProcessMock.exec.calledWith('cp -R overrides/* google'));
   });
