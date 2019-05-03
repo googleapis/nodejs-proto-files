@@ -4,6 +4,29 @@
 
 [1]: https://www.npmjs.com/package/google-proto-files?activeTab=versions
 
+## [1.0.0](https://www.github.com/googleapis/nodejs-proto-files/compare/v0.20.0...v1.0.0) (2019-05-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @google-cloud/promisify to v1 ([#179](https://www.github.com/googleapis/nodejs-proto-files/issues/179)) ([9a819f9](https://www.github.com/googleapis/nodejs-proto-files/commit/9a819f9))
+
+
+### Build System
+
+* upgrade engines field to >=8.10.0 ([#175](https://www.github.com/googleapis/nodejs-proto-files/issues/175)) ([e856a14](https://www.github.com/googleapis/nodejs-proto-files/commit/e856a14))
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency gts to v1 ([#173](https://www.github.com/googleapis/nodejs-proto-files/issues/173)) ([3ef1e72](https://www.github.com/googleapis/nodejs-proto-files/commit/3ef1e72))
+
+
+### BREAKING CHANGES
+
+* **deps:** this will ship async/await with the generated code.
+* upgrade engines field to >=8.10.0 (#175)
+
 ## v0.20.0
 
 03-15-2019 11:15 PDT
@@ -132,4 +155,3 @@ This is a minor service release, with a few internal changes.
 - Configure Renovate ([#48](https://github.com/googleapis/nodejs-proto-files/pull/48))
 - chore(package): update eslint to version 5.0.0 ([#49](https://github.com/googleapis/nodejs-proto-files/pull/49))
 - refactor: drop repo-tool as an exec wrapper ([#51](https://github.com/googleapis/nodejs-proto-files/pull/51))
-
