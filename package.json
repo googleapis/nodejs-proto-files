@@ -40,7 +40,7 @@
   "dependencies": {
     "@google-cloud/promisify": "^1.0.0",
     "protobufjs": "^6.8.0",
-    "walkdir": "^0.3.0"
+    "walkdir": "^0.4.0"
   },
   "devDependencies": {
     "@compodoc/compodoc": "^1.1.7",
