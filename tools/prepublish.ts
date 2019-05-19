@@ -4,7 +4,7 @@
  * Distributed under MIT license.
  * See file LICENSE for detail or copy at https://opensource.org/licenses/MIT
  */
-import {promisify} from '@google-cloud/promisify';
+import {promisify} from 'util';
 import * as fs from 'fs';
 import * as got from 'got';
 import * as path from 'path';
