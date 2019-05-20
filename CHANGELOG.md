@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/google-proto-files?activeTab=versions
 
+### [1.0.1](https://www.github.com/googleapis/nodejs-proto-files/compare/v1.0.0...v1.0.1) (2019-05-20)
+
+
+### Bug Fixes
+
+* **deps:** update dependency walkdir to ^0.4.0 ([#187](https://www.github.com/googleapis/nodejs-proto-files/issues/187)) ([48682cd](https://www.github.com/googleapis/nodejs-proto-files/commit/48682cd))
+
 ## [1.0.0](https://www.github.com/googleapis/nodejs-proto-files/compare/v0.20.0...v1.0.0) (2019-05-03)
 
 
