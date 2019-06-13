@@ -14,7 +14,7 @@
 All of the Google API's protocol buffer files
 
 
-
+* [Google APIs Proto Files Node.js Client API Reference][client-docs]
 
 * [github.com/googleapis/nodejs-proto-files](https://github.com/googleapis/nodejs-proto-files)
 
@@ -81,6 +81,9 @@ const MyService = root.lookup('example.MyService');
 
 
 
+The [Google APIs Proto Files Node.js Client API Reference][client-docs] documentation
+also contains samples.
+
 ## Versioning
 
 This library follows [Semantic Versioning](http://semver.org/).
@@ -110,7 +113,7 @@ Apache Version 2.0
 
 See [LICENSE](https://github.com/googleapis/nodejs-proto-files/blob/master/LICENSE)
 
-
+[client-docs]: https://googleapis.dev/nodejs/nodejs-proto-files/latest
 
 [shell_img]: https://gstatic.com/cloudssh/images/open-btn.png
 [projects]: https://console.cloud.google.com/project
