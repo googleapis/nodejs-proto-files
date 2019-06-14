@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/google-proto-files?activeTab=versions
 
+### [1.0.2](https://www.github.com/googleapis/nodejs-proto-files/compare/v1.0.1...v1.0.2) (2019-06-14)
+
+
+### Bug Fixes
+
+* **docs:** move to new client docs URL ([#203](https://www.github.com/googleapis/nodejs-proto-files/issues/203)) ([324bbad](https://www.github.com/googleapis/nodejs-proto-files/commit/324bbad))
+
 ### [1.0.1](https://www.github.com/googleapis/nodejs-proto-files/compare/v1.0.0...v1.0.1) (2019-05-20)
 
 
