@@ -41,5 +41,8 @@ module.exports = {
     sourceFiles: false,
     systemName: 'google-proto-files',
     theme: 'lumen'
+  },
+  markdown: {
+    idInHeadings: true
   }
 };
