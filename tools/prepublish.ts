@@ -57,7 +57,6 @@ async function main() {
       return (
         file.parent.indexOf('protobuf-master') === 0 &&
         file.parent.indexOf('protobuf-master/src/') === 0 &&
-        file.parent.indexOf('/compiler') === -1 &&
         file.parent.indexOf('/internal') === -1 &&
         file.filename.indexOf('unittest') === -1 &&
         file.filename.indexOf('test') === -1
