@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/google-proto-files?activeTab=versions
 
+## [1.1.0](https://www.github.com/googleapis/nodejs-proto-files/compare/v1.0.3...v1.1.0) (2019-08-23)
+
+
+### Features
+
+* include google/protobuf/compiler ([#213](https://www.github.com/googleapis/nodejs-proto-files/issues/213)) ([79ce071](https://www.github.com/googleapis/nodejs-proto-files/commit/79ce071))
+
 ### [1.0.3](https://www.github.com/googleapis/nodejs-proto-files/compare/v1.0.2...v1.0.3) (2019-06-26)
 
 
