@@ -14,4 +14,30 @@
  * limitations under the License.
  */
 
-console.warn(`no samples available 👎`);
+'use strict';
+
+// [START protofiles_quickstart]
+const protos = require('google-proto-files');
+
+async function quickstart() {
+  // Get a directory path by executing as a function
+  const files = protos.getProtoPath('logging', 'v2');
+  console.log(files);
+  // node_modules/google-proto-files/google/logging/v2
+
+  // Get a path to the entry proto file for a specific API version
+  console.log(protos.pubsub.v1);
+  // node_modules/google-proto-files/google/pubsub/v1/pubsub.proto
+
+  // Load a proto which depends on google common protos.
+  const root1 = await protos.load('./cloudcats.proto');
+  const service1 = root1.lookup('example.MyService');
+  console.log(service1);
+
+  // Load protos synchronously
+  const root2 = protos.loadSync('./cloudcats.proto');
+  const service2 = root2.lookup('example.MyService');
+  console.log(service2);
+}
+quickstart();
+// [END protofiles_quickstart]

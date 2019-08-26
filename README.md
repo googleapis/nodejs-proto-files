@@ -29,8 +29,8 @@ Google APIs Client Libraries, in [Client Libraries Explained][explained].
 * [Quickstart](#quickstart)
 
   * [Installing the client library](#installing-the-client-library)
-
-
+  * [Using the client library](#using-the-client-library)
+* [Samples](#samples)
 * [Versioning](#versioning)
 * [Contributing](#contributing)
 * [License](#license)
@@ -43,41 +43,46 @@ Google APIs Client Libraries, in [Client Libraries Explained][explained].
 npm install google-proto-files
 ```
 
-## Using the API
 
-```js
-const protoFiles = require('google-proto-files')
+### Using the client library
+
+```javascript
+const protos = require('google-proto-files');
+
+async function quickstart() {
+  // Get a directory path by executing as a function
+  const files = protos.getProtoPath('logging', 'v2');
+  console.log(files);
+  // node_modules/google-proto-files/google/logging/v2
+
+  // Get a path to the entry proto file for a specific API version
+  console.log(protos.pubsub.v1);
+  // node_modules/google-proto-files/google/pubsub/v1/pubsub.proto
+
+  // Load a proto which depends on google common protos.
+  const root1 = await protos.load('./cloudcats.proto');
+  const service1 = root1.lookup('example.MyService')
+  console.log(service1)
+
+  // Load protos synchronously
+  const root2 = protos.loadSync('./cloudcats.proto');
+  const service2 = root2.lookup('example.MyService');
+  console.log(service2)
+}
+quickstart();
+
 ```
 
-### Get a directory path by executing as a function
-```js
-protoFiles('logging', 'v2')
-// node_modules/google-proto-files/google/logging/v2
-```
 
-### Get a path to the entry proto file for a specific API version
-```js
-protoFiles.pubsub.v1
-// node_modules/google-proto-files/google/pubsub/v1/pubsub.proto
-```
 
-### load|loadSync(fileName, [options])
+## Samples
 
-#### [options](https://github.com/dcodeIO/protobuf.js/blob/master/src/parse.js#L42-L44)
+Samples are in the [`samples/`](https://github.com/googleapis/nodejs-proto-files/tree/master/samples) directory. The samples' `README.md`
+has instructions for running the samples.
 
-#### Load a proto which depends on google common protos.
-##### Asynchronously
-```js
-protoFiles.load('path/to/file.proto').then(function(root) {
-  const MyService = root.lookup('example.MyService')
-})
-  ```
-
-##### Synchronously
-```js
-const root = protoFiles.loadSync('path/to/file.proto');
-const MyService = root.lookup('example.MyService');
-```
+| Sample                      | Source Code                       | Try it |
+| --------------------------- | --------------------------------- | ------ |
+| Quickstart | [source code](https://github.com/googleapis/nodejs-proto-files/blob/master/samples/quickstart.js) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-proto-files&page=editor&open_in_editor=samples/quickstart.js,samples/README.md) |
 
 
 
