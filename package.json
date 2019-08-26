@@ -29,7 +29,7 @@
     "cover": "nyc --reporter=lcov mocha build/test && nyc report",
     "fix": "gts fix && eslint --fix '**/*.js'",
     "system-test": "echo no system tests 😱",
-    "samples-test": "echo no sample tests 😱",
+    "samples-test": "cd samples && npm link ../ && npm test && cd ../",
     "docs": "compodoc src/",
     "clean": "gts clean",
     "compile": "tsc -p .",

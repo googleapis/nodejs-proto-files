@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package cloudcats;
+
+service Worker {
+  rpc Analyze (AnalyzeRequest) returns (stream AnalyzeResponse) {};
+}
+
+message AnalyzeRequest {}
+message AnalyzeResponse {
+  required string url = 1;
+  enum PostType {
+    CAT = 0;
+    DOG = 1;
+    NEITHER = 2;
+    BOTH = 3;
+  }
+  required PostType type = 2;
+}

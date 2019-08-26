@@ -14,4 +14,17 @@
  * limitations under the License.
  */
 
-console.warn(`no sample tests available 👎`);
+'use strict';
+
+const {execSync} = require('child_process');
+const {assert} = require('chai');
+
+const exec = cmd => execSync(cmd, {encoding: 'utf8'});
+
+describe('proto files samples', () => {
+  it('should run the quickstart', () => {
+    const out = exec('node quickstart.js');
+    assert.include(out, 'nodejs-proto-files/google/logging/v2');
+    assert.include(out, 'nodejs-proto-files/google/pubsub/v1/pubsub.proto');
+  });
+});
