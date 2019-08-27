@@ -61,13 +61,13 @@ async function quickstart() {
 
   // Load a proto which depends on google common protos.
   const root1 = await protos.load('./cloudcats.proto');
-  const service1 = root1.lookup('example.MyService')
-  console.log(service1)
+  const service1 = root1.lookup('example.MyService');
+  console.log(service1);
 
   // Load protos synchronously
   const root2 = protos.loadSync('./cloudcats.proto');
   const service2 = root2.lookup('example.MyService');
-  console.log(service2)
+  console.log(service2);
 }
 quickstart();
 
