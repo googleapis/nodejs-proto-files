@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/google-proto-files?activeTab=versions
 
+### [1.1.1](https://www.github.com/googleapis/nodejs-proto-files/compare/v1.1.0...v1.1.1) (2019-11-14)
+
+
+### Bug Fixes
+
+* **docs:** add jsdoc-region-tag plugin ([#230](https://www.github.com/googleapis/nodejs-proto-files/issues/230)) ([8d25cd1](https://www.github.com/googleapis/nodejs-proto-files/commit/8d25cd12afeef9cfc37a5835f849225e4a5b5066))
+
 ## [1.1.0](https://www.github.com/googleapis/nodejs-proto-files/compare/v1.0.3...v1.1.0) (2019-08-23)
 
 
