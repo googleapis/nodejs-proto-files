@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/google-proto-files?activeTab=versions
 
+### [1.1.2](https://www.github.com/googleapis/nodejs-proto-files/compare/v1.1.1...v1.1.2) (2020-01-03)
+
+
+### Bug Fixes
+
+* **deps:** pin TypeScript below 3.7.0 ([cce5185](https://www.github.com/googleapis/nodejs-proto-files/commit/cce51858b5bae0ad30193766b03ad2dc631694bf))
+
 ### [1.1.1](https://www.github.com/googleapis/nodejs-proto-files/compare/v1.1.0...v1.1.1) (2019-11-14)
 
 
