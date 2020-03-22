@@ -57,7 +57,7 @@
     "linkinator": "^2.0.0",
     "mocha": "^7.0.0",
     "c8": "^7.0.0",
-    "prettier": "^1.10.2",
+    "prettier": "^2.0.0",
     "proxyquire": "^2.0.0",
     "sinon": "^9.0.0",
     "typescript": "3.6.4"
