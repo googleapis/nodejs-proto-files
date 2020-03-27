@@ -12,18 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-'use strict';
-
-const {execSync} = require('child_process');
-const {assert} = require('chai');
-const {describe, it} = require('mocha');
-
-const exec = cmd => execSync(cmd, {encoding: 'utf8'});
-
-describe('proto files samples', () => {
-  it('should run the quickstart', () => {
-    const out = exec('node quickstart.js');
-    assert.include(out, 'nodejs-proto-files/google/logging/v2');
-    assert.include(out, 'nodejs-proto-files/google/pubsub/v1/pubsub.proto');
-  });
-});
+module.exports = {
+  ...require('gts/.prettierrc.json')
+}
