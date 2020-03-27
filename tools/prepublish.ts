@@ -9,7 +9,7 @@ import * as fs from 'fs';
 import * as got from 'got';
 import * as path from 'path';
 
-// tslint:disable-next-line variable-name
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const DecompressZip = require('decompress-zip');
 
 const extract = (input, opts, callback) => {
