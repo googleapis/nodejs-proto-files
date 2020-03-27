@@ -1,7 +1,7 @@
 {
   "name": "google-proto-files",
   "description": "All of the Google API's protocol buffer files",
-  "version": "1.1.2",
+  "version": "2.0.0",
   "license": "MIT",
   "author": "google-proto-files project authors",
   "engines": {
