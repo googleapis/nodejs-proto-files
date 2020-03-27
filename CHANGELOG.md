@@ -4,6 +4,23 @@
 
 [1]: https://www.npmjs.com/package/google-proto-files?activeTab=versions
 
+## [2.0.0](https://www.github.com/googleapis/nodejs-proto-files/compare/v1.1.2...v2.0.0) (2020-03-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* update to latest gts and TypeScript (#271)
+* require node 10 in engines field (#272)
+
+### Features
+
+* require node 10 in engines field ([#272](https://www.github.com/googleapis/nodejs-proto-files/issues/272)) ([062f10a](https://www.github.com/googleapis/nodejs-proto-files/commit/062f10a642663cfd20404cc3748ac0a7fbddd94e))
+
+
+### Build System
+
+* update to latest gts and TypeScript ([#271](https://www.github.com/googleapis/nodejs-proto-files/issues/271)) ([81c24ec](https://www.github.com/googleapis/nodejs-proto-files/commit/81c24ecde3bc01b54fb454752288f962a1ea6312))
+
 ### [1.1.2](https://www.github.com/googleapis/nodejs-proto-files/compare/v1.1.1...v1.1.2) (2020-01-03)
 
 
