@@ -22,7 +22,7 @@ const DecompressZip = require('decompress-zip');
 const extract = (input, opts, callback) => {
   const output = Math.random() + '.zip';
 
-  got
+  ((got as unknown) as got.Got)
     .stream(input)
     .on('error', callback)
     .pipe(fs.createWriteStream(output))
