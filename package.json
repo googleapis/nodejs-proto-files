@@ -34,7 +34,8 @@
     "pretest": "npm run prepare && npm run compile",
     "docs-test": "linkinator docs",
     "predocs-test": "npm run docs",
-    "prelint": "cd samples; npm link ../; npm i"
+    "prelint": "cd samples; npm link ../; npm install",
+    "precompile": "gts clean"
   },
   "dependencies": {
     "protobufjs": "^6.8.0",
