@@ -4,6 +4,19 @@
 
 [1]: https://www.npmjs.com/package/google-proto-files?activeTab=versions
 
+## [2.1.0](https://www.github.com/googleapis/nodejs-proto-files/compare/v2.0.0...v2.1.0) (2020-06-02)
+
+
+### Features
+
+* proto3 optional fields support ([#290](https://www.github.com/googleapis/nodejs-proto-files/issues/290)) ([8bd1d45](https://www.github.com/googleapis/nodejs-proto-files/commit/8bd1d452962ca43e533e8b65d67b49d7631845b5))
+
+
+### Bug Fixes
+
+* apache license URL ([#468](https://www.github.com/googleapis/nodejs-proto-files/issues/468)) ([#278](https://www.github.com/googleapis/nodejs-proto-files/issues/278)) ([740f75f](https://www.github.com/googleapis/nodejs-proto-files/commit/740f75ffc93f8831bdcf721a5a376fd78b8d2e33))
+* **deps:** use got v10 ([#245](https://www.github.com/googleapis/nodejs-proto-files/issues/245)) ([26229ef](https://www.github.com/googleapis/nodejs-proto-files/commit/26229ef87e7e8c93ebfe3f911f0dbe48f84d2f6a))
+
 ## [2.0.0](https://www.github.com/googleapis/nodejs-proto-files/compare/v1.1.2...v2.0.0) (2020-03-27)
 
 
