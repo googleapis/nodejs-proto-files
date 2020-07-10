@@ -9,7 +9,7 @@
 
 ### Features
 
-* add google/type/latlng.proto ([#305](https://www.github.com/googleapis/nodejs-proto-files/issues/305)) ([270a034](https://www.github.com/googleapis/nodejs-proto-files/commit/270a034f3777e11190814557072072ac96471f07))
+* update protos ([#305](https://www.github.com/googleapis/nodejs-proto-files/issues/305)) ([270a034](https://www.github.com/googleapis/nodejs-proto-files/commit/270a034f3777e11190814557072072ac96471f07))
 
 
 ### Bug Fixes
