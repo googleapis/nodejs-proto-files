@@ -79,3 +79,23 @@ describe('loadSync', () => {
     assert(root.lookup('test.TestMessage') instanceof protobuf.Type);
   });
 });
+
+describe('load real proto file', () => {
+  it('should load speech.v1', async () => {
+    const root = await googleProtoFiles.load(googleProtoFiles.speech.v1);
+    assert(
+      root.lookup('google.cloud.speech.v1.RecognizeRequest') instanceof
+        protobuf.Type
+    );
+  });
+
+  it('should load embeddedAssistant.v1alpha2', async () => {
+    const root = await googleProtoFiles.load(
+      googleProtoFiles.embeddedAssistant.v1alpha2
+    );
+    assert(
+      root.lookup('google.assistant.embedded.v1alpha2.AssistRequest') instanceof
+        protobuf.Type
+    );
+  });
+});
