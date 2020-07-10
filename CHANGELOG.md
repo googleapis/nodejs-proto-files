@@ -4,6 +4,14 @@
 
 [1]: https://www.npmjs.com/package/google-proto-files?activeTab=versions
 
+### [2.1.2](https://www.github.com/googleapis/nodejs-proto-files/compare/v2.1.1...v2.1.2) (2020-07-10)
+
+
+### Bug Fixes
+
+* make load handle imports properly ([#304](https://www.github.com/googleapis/nodejs-proto-files/issues/304)) ([4e198cc](https://www.github.com/googleapis/nodejs-proto-files/commit/4e198cc6882eea1043991d8a474694a9b6ad78da))
+* TypeScript error in got package ([#302](https://www.github.com/googleapis/nodejs-proto-files/issues/302)) ([b5ad7ce](https://www.github.com/googleapis/nodejs-proto-files/commit/b5ad7ce218fbaa3151eb3fe26ec0a5b90fbb43e2))
+
 ### [2.1.1](https://www.github.com/googleapis/nodejs-proto-files/compare/v2.1.0...v2.1.1) (2020-07-06)
 
 
