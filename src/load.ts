@@ -41,7 +41,7 @@ export class GoogleProtoFilesRoot extends protobuf.Root {
       // on.
       'rpc',
       'type',
-    ].map(dir => path.join(__dirname, '../../', 'google', dir));
+    ].map(dir => path.join(__dirname, '..', '..', 'google', dir));
 
     if (!COMMON_PROTO_FILES) {
       COMMON_PROTO_FILES = commonProtoDirs
@@ -66,10 +66,7 @@ export class GoogleProtoFilesRoot extends protobuf.Root {
       return includePath;
     }
 
-    const fullIncludePath = path.join(
-      __dirname,
-      path.relative(__dirname, includePath)
-    );
+    const fullIncludePath = path.join(__dirname, '..', '..', includePath);
     const commonProtoFiles = GoogleProtoFilesRoot.getCommonProtoFiles();
 
     if (commonProtoFiles.indexOf(fullIncludePath) > -1) {
