@@ -11,7 +11,7 @@
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "94421c47802f56a44c320257b2b4c190dc7d6b68"
+        "sha": "bd0deaa1113b588d70449535ab9cbf0f2bd0e72f"
       }
     }
   ],
@@ -59,10 +59,10 @@
     ".nycrc",
     ".prettierignore",
     ".prettierrc.js",
-    "0.0805835958338208.zip",
-    "0.15171179350076902.zip",
-    "0.2904738559338462.zip",
-    "0.30046588979207955.zip",
+    "0.0808662491236285.zip",
+    "0.4020549017260977.zip",
+    "0.48763718465619554.zip",
+    "0.6349274297883347.zip",
     "CODE_OF_CONDUCT.md",
     "LICENSE",
     "README.md",
