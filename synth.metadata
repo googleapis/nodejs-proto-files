@@ -11,7 +11,7 @@
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "3a00b7fea8c4c83eaff8eb207f530a2e3e8e1de3"
+        "sha": "89d431fb2975fc4e0ed24995a6e6dfc8ff4c24fa"
       }
     }
   ],
@@ -36,8 +36,6 @@
     ".kokoro/continuous/node10/test.cfg",
     ".kokoro/continuous/node12/common.cfg",
     ".kokoro/continuous/node12/test.cfg",
-    ".kokoro/continuous/node8/common.cfg",
-    ".kokoro/continuous/node8/test.cfg",
     ".kokoro/docs.sh",
     ".kokoro/lint.sh",
     ".kokoro/populate-secrets.sh",
@@ -61,10 +59,10 @@
     ".nycrc",
     ".prettierignore",
     ".prettierrc.js",
-    "0.20653610089747443.zip",
-    "0.2697768902502271.zip",
-    "0.5132493278534112.zip",
-    "0.5349057349560788.zip",
+    "0.16837900629286673.zip",
+    "0.35319993439379793.zip",
+    "0.5843121560991684.zip",
+    "0.9543506791547316.zip",
     "CODE_OF_CONDUCT.md",
     "LICENSE",
     "README.md",
