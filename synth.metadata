@@ -4,14 +4,14 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/nodejs-proto-files.git",
-        "sha": "208512190c338e2642084fe8246520ea2a3e2d87"
+        "sha": "b944ee873ac03446f7baa6874d33df0cbf78d291"
       }
     },
     {
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "fdd03c161003ab97657cc0218f25c82c89ddf4b6"
+        "sha": "079dcce498117f9570cebe6e6cff254b38ba3860"
       }
     }
   ],
@@ -58,10 +58,10 @@
     ".nycrc",
     ".prettierignore",
     ".prettierrc.js",
-    "0.17149788146396272.zip",
-    "0.3993734061476759.zip",
-    "0.587389458144054.zip",
-    "0.7883900465425315.zip",
+    "0.16718915014375724.zip",
+    "0.6377424856671798.zip",
+    "0.7032178859208684.zip",
+    "0.7875590081598869.zip",
     "CODE_OF_CONDUCT.md",
     "LICENSE",
     "README.md",
