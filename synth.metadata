@@ -4,7 +4,7 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/nodejs-proto-files.git",
-        "sha": "b944ee873ac03446f7baa6874d33df0cbf78d291"
+        "sha": "b9a79ba6d730913576902d5b0e6ad854da0ad2a5"
       }
     },
     {
@@ -58,14 +58,15 @@
     ".nycrc",
     ".prettierignore",
     ".prettierrc.js",
-    "0.16718915014375724.zip",
-    "0.6377424856671798.zip",
-    "0.7032178859208684.zip",
-    "0.7875590081598869.zip",
+    "0.040416629798683434.zip",
+    "0.08249550232335112.zip",
+    "0.29618578424784303.zip",
+    "0.6799034332879248.zip",
     "CODE_OF_CONDUCT.md",
     "LICENSE",
     "README.md",
     "api-extractor.json",
+    "gapic/metadata/gapic_metadata.proto",
     "grafeas/v1/attestation.proto",
     "grafeas/v1/build.proto",
     "grafeas/v1/common.proto",
