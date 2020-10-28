@@ -4,14 +4,14 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/nodejs-proto-files.git",
-        "sha": "b9a79ba6d730913576902d5b0e6ad854da0ad2a5"
+        "sha": "511c1007630ade914051fe53ec82487b54c0c010"
       }
     },
     {
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "079dcce498117f9570cebe6e6cff254b38ba3860"
+        "sha": "0c868d49b8e05bc1f299bc773df9eb4ef9ed96e9"
       }
     }
   ],
@@ -54,14 +54,16 @@
     ".kokoro/test.bat",
     ".kokoro/test.sh",
     ".kokoro/trampoline.sh",
+    ".kokoro/trampoline_v2.sh",
     ".mocharc.js",
     ".nycrc",
     ".prettierignore",
     ".prettierrc.js",
-    "0.040416629798683434.zip",
-    "0.08249550232335112.zip",
-    "0.29618578424784303.zip",
-    "0.6799034332879248.zip",
+    ".trampolinerc",
+    "0.4553550109731239.zip",
+    "0.5915760705667212.zip",
+    "0.6260349508448455.zip",
+    "0.6754212196124076.zip",
     "CODE_OF_CONDUCT.md",
     "LICENSE",
     "README.md",
