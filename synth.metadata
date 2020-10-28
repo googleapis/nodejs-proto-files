@@ -11,7 +11,7 @@
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "5f6ef0ec5501d33c4667885b37a7685a30d41a76"
+        "sha": "b7413d38b763827c72c0360f0a3d286c84656eeb"
       }
     }
   ],
@@ -60,10 +60,10 @@
     ".prettierignore",
     ".prettierrc.js",
     ".trampolinerc",
-    "0.044033721601275166.zip",
-    "0.11093386123985471.zip",
-    "0.3598697055846225.zip",
-    "0.7519409414013367.zip",
+    "0.1880928515492406.zip",
+    "0.5504149790060406.zip",
+    "0.648533545515046.zip",
+    "0.8408200818547564.zip",
     "CODE_OF_CONDUCT.md",
     "LICENSE",
     "README.md",
