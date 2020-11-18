@@ -4,7 +4,7 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/nodejs-proto-files.git",
-        "sha": "b9a79ba6d730913576902d5b0e6ad854da0ad2a5"
+        "sha": "511c1007630ade914051fe53ec82487b54c0c010"
       }
     },
     {
@@ -58,10 +58,10 @@
     ".nycrc",
     ".prettierignore",
     ".prettierrc.js",
-    "0.040416629798683434.zip",
-    "0.08249550232335112.zip",
-    "0.29618578424784303.zip",
-    "0.6799034332879248.zip",
+    "0.09337521919086123.zip",
+    "0.15262498950764258.zip",
+    "0.5366179599821197.zip",
+    "0.8002229562077858.zip",
     "CODE_OF_CONDUCT.md",
     "LICENSE",
     "README.md",
@@ -80,6 +80,7 @@
     "grafeas/v1/upgrade.proto",
     "grafeas/v1/vulnerability.proto",
     "renovate.json",
-    "samples/README.md"
+    "samples/README.md",
+    "storage/clouddms/logging/v1/clouddms_stackdriver_logs.proto"
   ]
 }
