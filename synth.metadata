@@ -82,6 +82,7 @@
     "grafeas/v1/upgrade.proto",
     "grafeas/v1/vulnerability.proto",
     "renovate.json",
-    "samples/README.md"
+    "samples/README.md",
+    "storage/clouddms/logging/v1/clouddms_stackdriver_logs.proto"
   ]
 }
