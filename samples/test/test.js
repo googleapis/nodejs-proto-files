@@ -23,7 +23,7 @@ const exec = cmd => execSync(cmd, {encoding: 'utf8'});
 describe('proto files samples', () => {
   it('should run the quickstart', () => {
     const out = exec('node quickstart.js');
-    assert.include(out, 'nodejs-proto-files/google/logging/v2');
-    assert.include(out, 'nodejs-proto-files/google/pubsub/v1/pubsub.proto');
+    assert.include(out, 'google/logging/v2');
+    assert.include(out, 'google/pubsub/v1/pubsub.proto');
   });
 });
