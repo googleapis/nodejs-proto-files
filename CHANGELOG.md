@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/google-proto-files?activeTab=versions
 
+## [2.4.0](https://www.github.com/googleapis/nodejs-proto-files/compare/v2.3.0...v2.4.0) (2021-01-14)
+
+
+### Features
+
+* adds SQLSERVER enum ([d4eb1a3](https://www.github.com/googleapis/nodejs-proto-files/commit/d4eb1a3e9beaf4b9d4efd2e8eefb6f9457ca44c4))
+
 ## [2.3.0](https://www.github.com/googleapis/nodejs-proto-files/compare/v2.2.0...v2.3.0) (2020-11-18)
 
 
