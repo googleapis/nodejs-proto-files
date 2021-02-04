@@ -4,7 +4,7 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/nodejs-proto-files.git",
-        "sha": "1dd1a907bb59b19a1f9ff76546041e732cb9cd15"
+        "sha": "6b092e2b0cef2ca850bbae61daae9bef6636536e"
       }
     },
     {
