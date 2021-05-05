@@ -4,14 +4,14 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/nodejs-proto-files.git",
-        "sha": "53314db14dfd387570561b252154514609656675"
+        "sha": "848b19a137e5cce92bc4b6aebef1942bf70bfc36"
       }
     },
     {
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "c6706ee5d693e9ae5967614170732646590d8374"
+        "sha": "e6f3d54be015a394b6ab5a25903ec09062a2b424"
       }
     }
   ]
