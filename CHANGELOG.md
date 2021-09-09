@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/google-proto-files?activeTab=versions
 
+### [2.4.1](https://www.github.com/googleapis/nodejs-proto-files/compare/v2.4.0...v2.4.1) (2021-09-09)
+
+
+### Bug Fixes
+
+* **build:** switch primary branch to main ([#365](https://www.github.com/googleapis/nodejs-proto-files/issues/365)) ([cf58304](https://www.github.com/googleapis/nodejs-proto-files/commit/cf5830413f1952561a70386a0c568f5dcb1c3fa2))
+
 ## [2.4.0](https://www.github.com/googleapis/nodejs-proto-files/compare/v2.3.0...v2.4.0) (2021-01-14)
 
 
