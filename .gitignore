@@ -6,6 +6,9 @@ docs/
 *.lock
 *-lock.js*
 google/
+grafeas/
+storage/
+gapic/
 package-lock.json
 build/
 .vscode/
