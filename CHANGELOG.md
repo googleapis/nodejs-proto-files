@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/google-proto-files?activeTab=versions
 
+## [2.5.0](https://www.github.com/googleapis/nodejs-proto-files/compare/v2.4.1...v2.5.0) (2021-10-19)
+
+
+### Features
+
+* include gapic and grafeas, add routing.proto, update protos ([#372](https://www.github.com/googleapis/nodejs-proto-files/issues/372)) ([5c19425](https://www.github.com/googleapis/nodejs-proto-files/commit/5c194257b9604e2214162928bd01743adfb2c066))
+
 ### [2.4.1](https://www.github.com/googleapis/nodejs-proto-files/compare/v2.4.0...v2.4.1) (2021-09-09)
 
 
