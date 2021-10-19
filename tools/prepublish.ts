@@ -16,6 +16,8 @@ import * as fs from 'fs';
 import * as got from 'got';
 import * as path from 'path';
 
+const protoFolders = ['google', 'grafeas', 'gapic'];
+
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const DecompressZip = require('decompress-zip');
 
@@ -49,7 +51,7 @@ const extractAsync = promisify(extract);
 const execAsync = promisify(require('child_process').exec);
 
 async function main() {
-  await execAsync('rm -rf google');
+  await execAsync(`rm -rf ${protoFolders.join(' ')}`);
 
   await extractAsync(
     'https://github.com/googleapis/googleapis/archive/master.zip',
