@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/google-proto-files?activeTab=versions
 
+### [2.5.1](https://www.github.com/googleapis/nodejs-proto-files/compare/v2.5.0...v2.5.1) (2021-12-21)
+
+
+### Bug Fixes
+
+* **proto:** speech has additional common proto ([#382](https://www.github.com/googleapis/nodejs-proto-files/issues/382)) ([6423650](https://www.github.com/googleapis/nodejs-proto-files/commit/64236509b38a8b3e864e4c679fa3c7392db39587))
+
 ## [2.5.0](https://www.github.com/googleapis/nodejs-proto-files/compare/v2.4.1...v2.5.0) (2021-10-19)
 
 
