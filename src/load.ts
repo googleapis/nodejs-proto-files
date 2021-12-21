@@ -36,6 +36,7 @@ export class GoogleProtoFilesRoot extends protobuf.Root {
       // https://github.com/googleapis/googleapis/blob/master/gapic/packaging/common_protos.yaml
       'api',
       path.join('logging', 'type'),
+      path.join('cloud', 'speech', 'v1'),
       'longrunning',
       'protobuf', // This is an additional path that the common protos depend
       // on.
