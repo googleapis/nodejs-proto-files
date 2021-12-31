@@ -6,7 +6,6 @@
 
 
 [![npm version](https://img.shields.io/npm/v/google-proto-files.svg)](https://www.npmjs.org/package/google-proto-files)
-[![codecov](https://img.shields.io/codecov/c/github/googleapis/nodejs-proto-files/main.svg?style=flat)](https://codecov.io/gh/googleapis/nodejs-proto-files)
 
 
 
