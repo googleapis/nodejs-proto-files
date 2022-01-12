@@ -7,6 +7,5 @@
   "distribution_name": "google-proto-files",
   "requires_billing": false,
   "client_documentation": "https://cloud.google.com/nodejs/docs/reference/google-proto-files/latest",
-  "api_shortname": "nodejs-proto-files",
   "library_type": "OTHER"
 }
