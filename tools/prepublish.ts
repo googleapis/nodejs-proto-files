@@ -60,12 +60,12 @@ async function main() {
     }
   );
 
-  await extractAsync('https://github.com/google/protobuf/archive/master.zip', {
+  await extractAsync('https://github.com/google/protobuf/archive/main.zip', {
     strip: 2,
     filter: file => {
       return (
-        file.parent.indexOf('protobuf-master') === 0 &&
-        file.parent.indexOf('protobuf-master/src/') === 0 &&
+        file.parent.indexOf('protobuf-main') === 0 &&
+        file.parent.indexOf('protobuf-main/src/') === 0 &&
         file.parent.indexOf('/internal') === -1 &&
         file.filename.indexOf('unittest') === -1 &&
         file.filename.indexOf('test') === -1
