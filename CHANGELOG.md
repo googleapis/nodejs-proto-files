@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/google-proto-files?activeTab=versions
 
+### [2.5.2](https://github.com/googleapis/nodejs-proto-files/compare/v2.5.1...v2.5.2) (2022-05-03)
+
+
+### Bug Fixes
+
+* protobuf moved to main branch ([#426](https://github.com/googleapis/nodejs-proto-files/issues/426)) ([a8b9121](https://github.com/googleapis/nodejs-proto-files/commit/a8b9121151d2216d4eafab2808d42ce60d37a6a1))
+
 ### [2.5.1](https://www.github.com/googleapis/nodejs-proto-files/compare/v2.5.0...v2.5.1) (2021-12-21)
 
 
