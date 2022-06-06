@@ -4,6 +4,17 @@
 
 [1]: https://www.npmjs.com/package/google-proto-files?activeTab=versions
 
+## [3.0.0](https://github.com/googleapis/nodejs-proto-files/compare/v2.5.2...v3.0.0) (2022-05-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* update library to use Node 12 (#434)
+
+### Build System
+
+* update library to use Node 12 ([#434](https://github.com/googleapis/nodejs-proto-files/issues/434)) ([2d8996e](https://github.com/googleapis/nodejs-proto-files/commit/2d8996e1e37384b904a583808f14c2d28a4a961e))
+
 ### [2.5.2](https://github.com/googleapis/nodejs-proto-files/compare/v2.5.1...v2.5.2) (2022-05-03)
 
 
