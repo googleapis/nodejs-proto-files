@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/google-proto-files?activeTab=versions
 
+## [3.0.2](https://github.com/googleapis/nodejs-proto-files/compare/v3.0.1...v3.0.2) (2022-08-23)
+
+
+### Bug Fixes
+
+* remove pip install statements ([#1546](https://github.com/googleapis/nodejs-proto-files/issues/1546)) ([#441](https://github.com/googleapis/nodejs-proto-files/issues/441)) ([4e3940c](https://github.com/googleapis/nodejs-proto-files/commit/4e3940c887c6463c679cd00a1e8756544140d637))
+
 ## [3.0.1](https://github.com/googleapis/nodejs-proto-files/compare/v3.0.0...v3.0.1) (2022-07-21)
 
 
