@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/google-proto-files?activeTab=versions
 
+## [3.0.3](https://github.com/googleapis/nodejs-proto-files/compare/v3.0.2...v3.0.3) (2023-02-03)
+
+
+### Bug Fixes
+
+* Revert "test: update tests to reflect upstream fix ([#448](https://github.com/googleapis/nodejs-proto-files/issues/448))" ([#449](https://github.com/googleapis/nodejs-proto-files/issues/449)) ([4b6bdc9](https://github.com/googleapis/nodejs-proto-files/commit/4b6bdc932b015f30eae652a9fb8927c9d84ea4d1))
+
 ## [3.0.2](https://github.com/googleapis/nodejs-proto-files/compare/v3.0.1...v3.0.2) (2022-08-23)
 
 
