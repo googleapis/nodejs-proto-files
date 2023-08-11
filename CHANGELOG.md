@@ -4,6 +4,17 @@
 
 [1]: https://www.npmjs.com/package/google-proto-files?activeTab=versions
 
+## [4.0.0](https://github.com/googleapis/nodejs-proto-files/compare/v3.0.3...v4.0.0) (2023-08-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* upgrade to Node 14 ([#462](https://github.com/googleapis/nodejs-proto-files/issues/462))
+
+### Miscellaneous Chores
+
+* Upgrade to Node 14 ([#462](https://github.com/googleapis/nodejs-proto-files/issues/462)) ([dd47c3f](https://github.com/googleapis/nodejs-proto-files/commit/dd47c3f4687789ebae028b6b60fd3eea1bb60206))
+
 ## [3.0.3](https://github.com/googleapis/nodejs-proto-files/compare/v3.0.2...v3.0.3) (2023-02-03)
 
 
