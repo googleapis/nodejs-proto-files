@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/google-proto-files?activeTab=versions
 
+## [4.1.0](https://github.com/googleapis/nodejs-proto-files/compare/v4.0.0...v4.1.0) (2024-01-11)
+
+
+### Features
+
+* Rerun with new proto files (specifically field_info.proto) ([#480](https://github.com/googleapis/nodejs-proto-files/issues/480)) ([1f95f12](https://github.com/googleapis/nodejs-proto-files/commit/1f95f1225bfbaf2281df605e2e5ac194262e0abf))
+
 ## [4.0.0](https://github.com/googleapis/nodejs-proto-files/compare/v3.0.3...v4.0.0) (2023-08-11)
 
 
