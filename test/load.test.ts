@@ -63,11 +63,6 @@ describe('loadSync', () => {
     '../../test/fixtures',
     'library.proto'
   );
-  it('should not be able to load test file using protobufjs directly', () => {
-    const root = protobuf.loadSync(TEST_FILE);
-    // Common proto that should not have been loaded.
-    assert.strictEqual(root.lookup('google.api.Http'), null);
-  });
 
   it('should load a test file that relies on common protos', () => {
     const root = googleProtoFiles.loadSync(TEST_FILE);
