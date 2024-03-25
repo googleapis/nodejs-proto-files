@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/google-proto-files?activeTab=versions
 
+## [4.2.0](https://github.com/googleapis/nodejs-proto-files/compare/v4.1.0...v4.2.0) (2024-03-25)
+
+
+### Features
+
+* Add new api_version proto file ([#484](https://github.com/googleapis/nodejs-proto-files/issues/484)) ([efc2315](https://github.com/googleapis/nodejs-proto-files/commit/efc2315fa6d36295d6a1452972a69ad490e7787c))
+
 ## [4.1.0](https://github.com/googleapis/nodejs-proto-files/compare/v4.0.0...v4.1.0) (2024-01-11)
 
 
