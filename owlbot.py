@@ -14,4 +14,4 @@
 
 import synthtool.languages.node as node
 
-node.owlbot_main(templates_excludes=["CONTRIBUTING.md"])
+node.owlbot_main(templates_excludes=["CONTRIBUTING.md", ".github/ISSUE_TEMPLATE", ".github/scripts/close-invalid-link.cjs", ".github/workflows/issues-no-repro.yaml"])
