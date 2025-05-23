@@ -56,10 +56,10 @@ export const dlp = {
 
 export const embeddedAssistant = {
   v1alpha1: getProtoPath(
-    'assistant/embedded/v1alpha1/embedded_assistant.proto'
+    'assistant/embedded/v1alpha1/embedded_assistant.proto',
   ),
   v1alpha2: getProtoPath(
-    'assistant/embedded/v1alpha2/embedded_assistant.proto'
+    'assistant/embedded/v1alpha2/embedded_assistant.proto',
   ),
 };
 
@@ -107,10 +107,10 @@ export const spanner = {
   admin: {
     v1: {
       database: getProtoPath(
-        'spanner/admin/database/v1/spanner_database_admin.proto'
+        'spanner/admin/database/v1/spanner_database_admin.proto',
       ),
       instance: getProtoPath(
-        'spanner/admin/instance/v1/spanner_instance_admin.proto'
+        'spanner/admin/instance/v1/spanner_instance_admin.proto',
       ),
     },
   },
@@ -128,7 +128,7 @@ export const storagetransfer = {
 
 export const videointelligence = {
   v1beta1: getProtoPath(
-    'cloud/videointelligence/v1beta1/video_intelligence.proto'
+    'cloud/videointelligence/v1beta1/video_intelligence.proto',
   ),
 };
 

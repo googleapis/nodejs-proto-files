@@ -57,7 +57,7 @@ async function main() {
     'https://github.com/googleapis/googleapis/archive/master.zip',
     {
       strip: 1,
-    }
+    },
   );
 
   await extractAsync('https://github.com/google/protobuf/archive/main.zip', {
@@ -74,7 +74,7 @@ async function main() {
   });
 
   await execAsync(
-    '[ -d "overrides" ] && cp -R overrides/* google || echo "no overrides"'
+    '[ -d "overrides" ] && cp -R overrides/* google || echo "no overrides"',
   );
 }
 
