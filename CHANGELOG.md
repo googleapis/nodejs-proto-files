@@ -4,6 +4,17 @@
 
 [1]: https://www.npmjs.com/package/google-proto-files?activeTab=versions
 
+## [5.0.0](https://github.com/googleapis/nodejs-proto-files/compare/v4.2.0...v5.0.0) (2025-05-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* update library to Node 18 ([#508](https://github.com/googleapis/nodejs-proto-files/issues/508))
+
+### Miscellaneous Chores
+
+* Update library to Node 18 ([#508](https://github.com/googleapis/nodejs-proto-files/issues/508)) ([0c757d9](https://github.com/googleapis/nodejs-proto-files/commit/0c757d9d36079f86a1037c2159c1604179b8348f))
+
 ## [4.2.0](https://github.com/googleapis/nodejs-proto-files/compare/v4.1.0...v4.2.0) (2024-03-25)
 
 
