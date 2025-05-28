@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import * as assert from 'assert';
+import assert from 'assert';
 import {describe, it} from 'mocha';
 import * as path from 'path';
 import * as protobuf from 'protobufjs';
@@ -24,7 +24,7 @@ describe('load', () => {
     __dirname,
     '../../test',
     'fixtures',
-    'library.proto'
+    'library.proto',
   );
   it('should not be able to load test file using protobufjs directly', done => {
     protobuf
@@ -48,7 +48,7 @@ describe('load', () => {
         assert(root instanceof protobuf.Root);
         assert(
           root.lookup('google.example.library.v1.LibraryService') instanceof
-            protobuf.Service
+            protobuf.Service,
         );
         assert(root.lookup('test.TestMessage') instanceof protobuf.Type);
         done();
@@ -61,7 +61,7 @@ describe('loadSync', () => {
   const TEST_FILE = path.join(
     __dirname,
     '../../test/fixtures',
-    'library.proto'
+    'library.proto',
   );
 
   it('should load a test file that relies on common protos', () => {
@@ -69,7 +69,7 @@ describe('loadSync', () => {
     assert(root instanceof protobuf.Root);
     assert(
       root.lookup('google.example.library.v1.LibraryService') instanceof
-        protobuf.Service
+        protobuf.Service,
     );
     assert(root.lookup('test.TestMessage') instanceof protobuf.Type);
   });
@@ -80,17 +80,17 @@ describe('load real proto file', () => {
     const root = await googleProtoFiles.load(googleProtoFiles.speech.v1);
     assert(
       root.lookup('google.cloud.speech.v1.RecognizeRequest') instanceof
-        protobuf.Type
+        protobuf.Type,
     );
   });
 
   it('should load embeddedAssistant.v1alpha2', async () => {
     const root = await googleProtoFiles.load(
-      googleProtoFiles.embeddedAssistant.v1alpha2
+      googleProtoFiles.embeddedAssistant.v1alpha2,
     );
     assert(
       root.lookup('google.assistant.embedded.v1alpha2.AssistRequest') instanceof
-        protobuf.Type
+        protobuf.Type,
     );
   });
 });

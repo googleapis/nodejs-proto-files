@@ -8,12 +8,12 @@ service Worker {
 
 message AnalyzeRequest {}
 message AnalyzeResponse {
-  required string url = 1;
+  string url = 1;
   enum PostType {
     CAT = 0;
     DOG = 1;
     NEITHER = 2;
     BOTH = 3;
   }
-  required PostType type = 2;
+  PostType type = 2;
 }
