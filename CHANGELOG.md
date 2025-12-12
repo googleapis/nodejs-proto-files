@@ -4,6 +4,13 @@
 
 [1]: https://www.npmjs.com/package/google-proto-files?activeTab=versions
 
+## [5.0.1](https://github.com/googleapis/nodejs-proto-files/compare/v5.0.0...v5.0.1) (2025-08-21)
+
+
+### Bug Fixes
+
+* **deps:** Update dependency protobufjs to v7.5.4 ([#524](https://github.com/googleapis/nodejs-proto-files/issues/524)) ([8ff2615](https://github.com/googleapis/nodejs-proto-files/commit/8ff2615d3eb8dff5fa0ff4fe14aa0e95c5661901))
+
 ## [5.0.0](https://github.com/googleapis/nodejs-proto-files/compare/v4.2.0...v5.0.0) (2025-05-28)
 
 
